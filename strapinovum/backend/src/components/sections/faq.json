@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_sections_faqs",
+  "info": {
+    "displayName": "Faq",
+    "icon": "align-justify",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Faqtoggles": {
+      "displayName": "FaqToggles",
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.faq-toggles"
+    }
+  }
+}

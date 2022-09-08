@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_elements_faq_toggles",
+  "info": {
+    "displayName": "FaqToggles",
+    "icon": "clinic-medical"
+  },
+  "options": {},
+  "attributes": {
+    "Question": {
+      "type": "string"
+    },
+    "Answer": {
+      "type": "richtext"
+    }
+  }
+}
