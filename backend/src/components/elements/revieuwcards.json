@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_elements_revieuwcards",
+  "info": {
+    "displayName": "revieuwcards",
+    "icon": "thumbs-down",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Name": {
+      "type": "string"
+    },
+    "Opinion": {
+      "type": "richtext"
+    },
+    "Rating": {
+      "type": "float"
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_sections_revieuws",
+  "info": {
+    "displayName": "Revieuw",
+    "icon": "satellite-dish",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "cards": {
+      "displayName": "revieuwcards",
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.revieuwcards"
+    },
+    "Title": {
+      "type": "string"
+    }
+  }
+}
