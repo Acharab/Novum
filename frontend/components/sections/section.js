@@ -24,13 +24,24 @@ export default function section({ data }) {
             <p className={`max-w-lg py-5  leading-normal  text-base   dark:text-gray-300`}>
               {data.Description}
             </p>
+            {
+
+            // console.log(data.Buttons)
+
+            data.Buttons==null &&
+              <></>
+            }
+            {
+            data.Buttons!==null &&
               <CustomLink link={data.Buttons}>
-                <div className="flex-auto  flex space-x-7 lg:items-start  sm:flex">
-                  <button className="px-8 py-4 sm:items-center  text-base font-medium text-center ease-in duration-300 hover:bg-orange-500 hover:text-white   text-orange-500 border-2 border-orange-500 rounded">
-                    {data.Buttons.text}
-                  </button>
-                </div>
+              <div className="flex-auto  flex space-x-7 lg:items-start  sm:flex">
+                <button className="px-8 py-4 sm:items-center  text-base font-medium text-center ease-in duration-300 hover:bg-orange-500 hover:text-white   text-orange-500 border-2 border-orange-500 rounded">
+                  {data.Buttons.text}
+                </button>
+              </div>
               </CustomLink>
+            }
+              
           </div>
         </div>
 

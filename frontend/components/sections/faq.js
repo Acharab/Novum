@@ -2,17 +2,16 @@ import React from 'react'
 
 export default function faq({ data }) {
     return (
-      <section className="bg-gray-200">
-        <div className="flex flex-wrap max-w-[1140px]  lg:gap-10 lg:flex-nowrap">
+      <section className="bg-gray-200  grid justify-center">
+        <div className="flex flex-wrap justify-center max-w-[1140px]  lg:gap-10 lg:flex-nowrap h-fit container p-8 mx-auto xl:px-0">
           <div className="">
-            <section className="text-grey-700">
-              <div className="container px-5 py-24 mx-auto ">
-                <div className="text-center  mb-20 grid grid-cols-2">
+            <div className="text-grey-700">
+              <div className="container grid justify-center px-5 py-24 mx-auto ">
+                <div className="text-center  mb-20 grid grid-cols-2 py-12">
                   <h1
-                    className="lg:text-6xl whitespace-nowrap md:text-4xl text-3xl lg:font-semibold lg:text-start lg:title-font text-gray-900 mb-3"
+                    className="lg:text-6xl whitespace-nowrap md:text-5xl text-4xl lg:font-semibold lg:text-start lg:title-font text-gray-900 mb-3"
                   >
-                    Veel Gestelde{" "}
-                    <span className="text-blue-500 font-semibold">Vragen</span>
+                    Veel Gestelde vragen
                   </h1>
                 </div>
                 <div className="flex flex-wrap lg:w-max-2xl sm:mx-auto sm:mb-2 -mx-2">
@@ -34,7 +33,7 @@ export default function faq({ data }) {
                    })} 
                 </div>
               </div>
-            </section>
+            </div>
           </div>
         </div>
       </section>
