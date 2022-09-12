@@ -167,6 +167,7 @@ export async function getPageData({ slug, locale, preview }) {
                   ... on ComponentSectionsHero{
                     id
                     Title
+                    bg
                     Description
                     Image{
                       ...FileParts

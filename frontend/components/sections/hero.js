@@ -7,16 +7,24 @@ import NextImage from "../elements/image";
 
 import CustomLink from "../elements/custom-link";
 export default function Hero({ data }) {
+  const color = data.bg
+  let text;
+  if(color === "black"){
+     text = "white"
+  }
+  if(color === "white"){
+    text = "black"
+  }
   return (
-    <section className={`bg-gray-500 md:py-16 lg:py-8 xl:py-0 py-52 w-screen`}>
+    <section className={`bg-${color} text-${text} md:py-16 lg:py-8 xl:py-0 py-52 w-screen`}>
     <div className="max-w-[1140px] lg:gap-10 lg:flex-nowrap h-fit container p-8 mx-auto xl:px-0">
       <div className="flex">
         <div className="grid place-content-center max-w-[100%]">
-          <h1 className="text-4xl font-bold h-fit md:pr-8 md:text-5xl max-w-[100%]  leading-snug  text-white  lg:text-7xl lg:leading-tight  xl:leading-tight tracking-wide">
+          <h1 className="text-4xl font-bold h-fit md:pr-8 md:text-5xl max-w-[100%]  leading-snug    lg:text-7xl lg:leading-tight  xl:leading-tight tracking-wide">
             {data.Title}
           </h1>
 
-          <p className="lg:w-4/6 pt-2 pb-10 md:pb-16 md:pt-6 md:text-base text-lg leading-normal text-gray-400 lg:text-base xl:text-base pr-0 md:pr-12 ">
+          <p className="lg:w-4/6 pt-2 pb-10 md:pb-16 md:pt-6 md:text-base text-lg leading-normal  lg:text-base xl:text-base pr-0 md:pr-12 ">
             {data.Description}
           </p>
             <CustomLink link={data.Buttons} key={data.Buttons.id}>
@@ -24,7 +32,7 @@ export default function Hero({ data }) {
                 <a
                   target="_blank"
                   rel="noopener"
-                  className="px-8 py-4 sm:items-center  text-base font-medium text-center ease-in duration-300 hover:bg-orange-500 hover:text-white   text-orange-500 border-2 border-orange-500 rounded"
+                  className="px-8 py-4 sm:items-center  text-base font-medium text-center ease-in duration-300 hover:bg-orange-500    text-orange-500 border-2 border-orange-500 rounded"
                 >
                   <span className="pr-2">{data.Buttons.text}</span>
                 </a>

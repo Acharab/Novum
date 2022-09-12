@@ -5,7 +5,7 @@ import NextImage from "../elements/image";
 function team({data}) {
     
   return (
-    <div className="bg-white justify-center items-center  ">
+    <div className="bg-white justify-center items-center  py-7">
       <div className="flex max-w-[1140px]  flex-col mt-2  items-center justify-center text-center">
         <h2 className="max-w-2xl tracking-wide mt-2 text-5xl font-bold leading-snug  text-gray-800 lg:leading-tight lg:text-5xl"></h2>
       </div>

@@ -2,6 +2,8 @@ import { useState } from "react"
 import PropTypes from "prop-types"
 import Link from "next/link"
 import { useRouter } from "next/router"
+import whiteLogo from "/public/newLogoWhite.png"
+import blackLogo from "/public/newLogoBlack.png"
 
 import { getButtonAppearance } from "utils/button"
 import { mediaPropTypes, linkPropTypes, buttonLinkPropTypes } from "utils/types"
@@ -12,14 +14,22 @@ import NextImage from "./image"
 import CustomLink from "./custom-link"
 import LocaleSwitch from "../locale-switch"
 
-const Navbar = ({ navbar, pageContext }) => {
+const Navbar = ({ navbar, pageContext}) => {
   const router = useRouter()
   const [mobileMenuIsShown, setMobileMenuIsShown] = useState(false)
-
+  const logo = router.asPath === "/" ? whiteLogo: router.asPath === "/diensten" ? blackLogo: router.asPath === "/aboutus" ? whiteLogo: ""
+  const background = router.asPath === "/" ? "black": router.asPath === "/diensten" ? "white": router.asPath === "/aboutus" ? "black": ""
+  let text;
+  if( background === "black"){
+    text = "white"
+  }
+  if( background === "white" ){
+    text = "black"
+  }
   return (
     <>
       {/* The actual navbar */}
-      <nav className={`bg-${navbar.background} py-6 sm:py-2`}>
+      <nav className={`bg-${background} text-${text} py-6 sm:py-2`}>
         <div className="container flex flex-row items-center justify-between">
           {/* Content aligned to the left */}
             <Link href="/">
