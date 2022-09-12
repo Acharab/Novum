@@ -46,7 +46,10 @@
         "sections.home-service",
         "sections.faq",
         "sections.cta",
-        "sections.revieuw"
+        "sections.revieuw",
+        "sections.work-process",
+        "sections.advantages",
+        "sections.teams"
       ],
       "pluginOptions": {
         "i18n": {

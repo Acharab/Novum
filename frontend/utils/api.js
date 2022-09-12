@@ -121,6 +121,37 @@ export async function getPageData({ slug, locale, preview }) {
                       Answer
                     }
                   }
+                  ... on ComponentSectionsWorkProcess{
+                    Title
+                  }
+                  ... on ComponentSectionsTeams{
+                    Teamcards{
+                      Image{
+                        ...FileParts
+                      }
+                      Position
+                      buttons{
+                        url
+                        newTab
+                        text
+                        type
+                      }
+                    }
+                  }
+                  ... on ComponentSectionsAdvantages{
+                    Title
+                    Image{
+                      ...FileParts
+                    }
+                    Advantages{
+                      Title
+                      Description
+                      Image{
+                        ...FileParts
+                      }
+                    }
+                  }
+                  
                   ... on ComponentSectionsRevieuw{
                     id
                     cards{

@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_sections_advantages",
+  "info": {
+    "displayName": "Advantages",
+    "icon": "phone-square",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Advantages": {
+      "displayName": "Advantages",
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.advantages"
+    },
+    "Image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}

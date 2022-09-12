@@ -58,7 +58,7 @@ export default function section({ data }) {
                 // better not using width and heigt directly on here
                 width="400"
                 height="250"
-                alt="Hero jpeg"
+                alt="Hero jpeg"n
               />
             </div>
           </div>

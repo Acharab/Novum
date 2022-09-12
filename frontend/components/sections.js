@@ -5,6 +5,9 @@ import faq from "./sections/faq"
 import homeService from "./sections/homeServicesSection"
 import sectie from "./sections/section"
 import revieuw from "./sections/revieuw"
+import workProcces from "./sections/workProcces"
+import advantages from "./sections/advantages"
+import team from "./sections/team"
 
 // Map Strapi sections to section components
 const sectionComponents = {
@@ -14,6 +17,9 @@ const sectionComponents = {
   ComponentSectionsHomeService: homeService,
   ComponentSectionsSection: sectie,
   ComponentSectionsRevieuw: revieuw,
+  ComponentSectionsWorkProcess: workProcces,
+  ComponentSectionsAdvantages: advantages,
+  ComponentSectionsTeams: team,
 }
 
 // Display a section individually

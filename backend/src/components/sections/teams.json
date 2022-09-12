@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_sections_teams",
+  "info": {
+    "displayName": "Teams",
+    "icon": "archway",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Teamcards": {
+      "displayName": "Teamcards",
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.teamcards"
+    }
+  }
+}

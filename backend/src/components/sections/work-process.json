@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_sections_work_processes",
+  "info": {
+    "displayName": "WorkProcess",
+    "icon": "warehouse",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    }
+  }
+}
