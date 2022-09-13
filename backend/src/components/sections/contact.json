@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_sections_contacts",
+  "info": {
+    "displayName": "Contact",
+    "icon": "user-check"
+  },
+  "options": {},
+  "attributes": {
+    "Privacystatement": {
+      "type": "string"
+    }
+  }
+}

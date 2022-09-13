@@ -164,6 +164,10 @@ export async function getPageData({ slug, locale, preview }) {
                       Rating
                     }
                   }
+                  ... on ComponentSectionsContact{
+                    id
+                    Privacystatement
+                  }
                   ... on ComponentSectionsHero{
                     id
                     Title
