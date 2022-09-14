@@ -17,6 +17,13 @@
       "type": "component",
       "repeatable": true,
       "component": "elements.cards"
+    },
+    "companys": {
+      "displayName": "company",
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.companys"
     }
+    
   }
 }

@@ -3,7 +3,6 @@ import NextImage from "../elements/image";
 import Revieuws from "@mui/material/Rating";
 import Stack from "@mui/material/Stack";
 function revieuw({data}) {
-    console.log(data.cards)
   return (
     <div className="bg-gray-100">
       <div className=" justify-center items-center">

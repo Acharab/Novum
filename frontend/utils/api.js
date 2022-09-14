@@ -168,6 +168,15 @@ export async function getPageData({ slug, locale, preview }) {
                     id
                     Privacystatement
                   }
+
+                  ... on ComponentSectionsAboutus {
+                    id
+                    Title
+                    Description
+                    Image{
+                      ...FileParts
+                    }
+                  }
                   ... on ComponentSectionsHero{
                     id
                     Title
@@ -188,6 +197,11 @@ export async function getPageData({ slug, locale, preview }) {
                     id
                     Title
                     Description
+                    companys{
+                      Image{
+                        ...FileParts
+                      }
+                    }
                     Cards{
                       id
                       Title

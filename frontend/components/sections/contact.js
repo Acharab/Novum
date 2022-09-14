@@ -28,11 +28,17 @@ function Contact({ data }) {
       });
   };
   return (
+    <div className="bg-black">
+
+    
     <form
       onSubmit={handleSubmit}
-      className="bg-black shadow rounded "
+      className="bg-black shadow p-6 wax-w-[1140px] container md:py-20"
     >
-      <div className="md:flex items-center mt-6 justify-center">
+      <div className="justify-center flex md:pr-9 mb-3">
+        <h2 className="text-[5rem] font-bold text-orange-500">Contact</h2>
+      </div>
+      <div className="md:flex items-center  justify-center">
         <div className="md:w-screen px-5 flex justify-center flex-col">
           <input
             tabIndex={0}
@@ -95,12 +101,11 @@ function Contact({ data }) {
       <p className="text-xs px-5 leading-3 pb-5 text-white mt-4">
         {data.Privacystatement}
       </p>
-      <div className="flex-auto px-5 justify-start items-start flex space-x-7 lg:items-start  sm:flex">
-      
+      <div className="flex-auto px-5 justify-start items-start flex space-x-7 lg:items-start sm:flex">
         <button
           type="submit"
           value="Verstuur"
-          className="px-8 py-4 sm:items-center flex gap-1  text-xl font-medium text-center ease-in duration-300 hover:bg-orange-500 hover:text-white   text-orange-500 border-2 border-orange-500 rounded  "
+          className="px-8 py-4 sm:items-center flex gap-1  text-xl font-medium text-center ease-in duration-300 hover:bg-orange-500 hover:text-white   text-orange-500 border-2 border-orange-500 rounded"
         >Verstuur
         </button>
 
@@ -110,6 +115,7 @@ function Contact({ data }) {
         </input> */}
       </div>
     </form>
+    </div>
   );
 }
 

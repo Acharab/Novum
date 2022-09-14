@@ -40,7 +40,7 @@ export default function Hero({ data }) {
                 <a
                   target="_blank"
                   rel="noopener"
-                  className="px-8 py-4 sm:items-center  text-base font-medium text-center ease-in duration-300 hover:bg-orange-500    text-orange-500 border-2 border-orange-500 rounded"
+                  className="px-8 py-4 sm:items-center  text-base font-medium text-center ease-in duration-300 hover:bg-orange-500 hover:text-white   text-orange-500 border-2 border-orange-500 rounded"
                 >
                   <span className="pr-2">{data.Buttons.text}</span>
                 </a>
@@ -55,7 +55,7 @@ export default function Hero({ data }) {
               <div className="absolute inset-0 md:-left-7 md:-bottom-7 md:mr-10 md:mt-10  md:border-2 lg:-left-7 lg:-bottom-7 lg:mr-10 lg:mt-10 rounded-3xl lg:border-2 border-orange-500 bg-orange-400/20"></div>
               <div className="absolute inset-0 md:-right-7 md:mb-10 md:ml-10 md:-top-7 md:border-2 lg:-right-7 lg:mb-10 lg:ml-10 lg:-top-7 rounded-3xl lg:border-2 border-blue-500"></div>
 
-              <div className="relative  grid px-0 z-40  border-2 border-blue-500 rounded-3xl  ">
+              <div className="relative  grid px-0  border-2 border-blue-500 rounded-3xl  ">
                 <NextImage
                   // add relative class to make the z-index work
                   // getStrapiMedia(hero.attributes.hero_image)

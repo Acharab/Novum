@@ -9,6 +9,7 @@ import workProcces from "./sections/workProcces"
 import advantages from "./sections/advantages"
 import team from "./sections/team"
 import contact from "./sections/contact"
+import aboutus from "./sections/aboutus"
 
 // Map Strapi sections to section components
 const sectionComponents = {
@@ -22,6 +23,7 @@ const sectionComponents = {
   ComponentSectionsAdvantages: advantages,
   ComponentSectionsTeams: team,
   ComponentSectionsContact: contact,
+  ComponentSectionsAboutus: aboutus,
 }
 
 // Display a section individually
