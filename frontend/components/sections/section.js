@@ -9,6 +9,8 @@ export default function section({ data }) {
   } else {
     imgpos = "right";
   }
+  const idContainer = data.Title === "Omzet belasting" ? "omzetbelasting": data.Title === "Algemeen advies" ? "algemeenadvies" : data.Title === "Jaarrekeningen" ? "jaarrekeningen" : data.Title === "Salarisadministratie" ? "salarisadministratie" : data.Title === "Rapportages" ? "rapportages" : data.Title === "Inkomsten belasting" ? "inkomstenbelasting" : ""
+  
   return (
     // <section className={`bg-${data.Background} py-36 md:py-20 justify-center items-center`} >
     //   <div className="flex flex-wrap max-w-[1140px]  py-18 lg:gap-10 lg:flex-nowrap container p-8 mx-auto xl:px-0">
@@ -63,7 +65,7 @@ export default function section({ data }) {
     //     </div>
     //   </div>
     // </section>
-    <div className={`items-center justify-center bg-${data.Background}`}>
+    <div className={`items-center justify-center bg-${data.Background}`} id={idContainer}>
       <div className="flex flex-wrap max-w-[1140px]  py-10 lg:gap-10 lg:flex-nowrap container p-8 mx-auto xl:px-0">
         <div
           className={`flex items-center justify-center w-full lg:w-1/2 ${
@@ -84,7 +86,7 @@ export default function section({ data }) {
         </div>
 
         <div
-          className={`flex flex-wrap items-center  justify-center w-full${
+          className={`flex flex-wrap items-center  justify-center w-full lg:w-1/2${
             imgpos === "left" ? "lg:justify-end" : ""
           }`}
         >

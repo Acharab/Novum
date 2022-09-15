@@ -121,7 +121,7 @@ export async function getPageData({ slug, locale, preview }) {
                       Answer
                     }
                   }
-                  ... on ComponentSectionsWorkProcess{
+                  ... on ComponentSectionsBlogpage{
                     Title
                   }
                   ... on ComponentSectionsTeams{

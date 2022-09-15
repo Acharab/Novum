@@ -5,11 +5,11 @@ import faq from "./sections/faq"
 import homeService from "./sections/homeServicesSection"
 import sectie from "./sections/section"
 import revieuw from "./sections/revieuw"
-import workProcces from "./sections/workProcces"
 import advantages from "./sections/advantages"
 import team from "./sections/team"
 import contact from "./sections/contact"
 import aboutus from "./sections/aboutus"
+import blogpage from "./sections/blogpage"
 
 // Map Strapi sections to section components
 const sectionComponents = {
@@ -19,11 +19,12 @@ const sectionComponents = {
   ComponentSectionsHomeService: homeService,
   ComponentSectionsSection: sectie,
   ComponentSectionsRevieuw: revieuw,
-  ComponentSectionsWorkProcess: workProcces,
   ComponentSectionsAdvantages: advantages,
   ComponentSectionsTeams: team,
   ComponentSectionsContact: contact,
   ComponentSectionsAboutus: aboutus,
+  ComponentSectionsBlogpage: blogpage,
+  
 }
 
 // Display a section individually

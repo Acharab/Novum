@@ -47,11 +47,11 @@
         "sections.faq",
         "sections.cta",
         "sections.revieuw",
-        "sections.work-process",
         "sections.advantages",
         "sections.teams",
         "sections.contact",
-        "sections.aboutus"
+        "sections.aboutus",
+        "sections.blogpage"
       ],
       "pluginOptions": {
         "i18n": {

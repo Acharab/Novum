@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_sections_blogpages",
+  "info": {
+    "displayName": "Blogpage",
+    "icon": "align-right"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    }
+  }
+}

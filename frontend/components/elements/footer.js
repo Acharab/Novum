@@ -27,7 +27,7 @@ const Footer = ({ footer }) => {
                     key={link.id}
                     className="text-gray-300 py-1 px-1 -mx-1 hover:text-white"
                   >
-                    <CustomLink link={link}>{link.text}</CustomLink>
+                    <CustomLink taget="_blank" link={link}>{link.text}</CustomLink>
                   </li>
                 ))}
               </ul>
