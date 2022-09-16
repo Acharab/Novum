@@ -10,6 +10,7 @@ import team from "./sections/team"
 import contact from "./sections/contact"
 import aboutus from "./sections/aboutus"
 import blogpage from "./sections/blogpage"
+import Files from "./sections/Files"
 
 // Map Strapi sections to section components
 const sectionComponents = {
@@ -24,6 +25,7 @@ const sectionComponents = {
   ComponentSectionsContact: contact,
   ComponentSectionsAboutus: aboutus,
   ComponentSectionsBlogpage: blogpage,
+  ComponentSectionsFiles: Files,
   
 }
 

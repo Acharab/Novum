@@ -119,6 +119,7 @@ export async function getPageData({ slug, locale, preview }) {
                     Faqtoggles {
                       Question
                       Answer
+                      pdfurl
                     }
                   }
                   ... on ComponentSectionsBlogpage{
@@ -218,6 +219,7 @@ export async function getPageData({ slug, locale, preview }) {
                       }
                     }
                   }
+                  
                   ... on ComponentSectionsSection{
                     id
                     Title
@@ -336,6 +338,8 @@ export async function getGlobalData(locale) {
                       url
                       newTab
                       text
+                      icons
+                      secondtext
                     }
                   }
                 }

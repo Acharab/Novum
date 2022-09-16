@@ -78,7 +78,7 @@ export default function section({ data }) {
                 {data.Title}
               </h2>
 
-              <p className="max-w-lg py-5 text-center leading-normal text-gray-400 text-base   dark:text-gray-300">
+              <p className="max-w-lg py-5 text-center leading-normal text-gray-500 text-base   dark:text-gray-300">
                 {data.Description}
               </p>
             </div>

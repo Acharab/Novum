@@ -2,11 +2,15 @@
   "collectionName": "components_elements_faq_toggles",
   "info": {
     "displayName": "FaqToggles",
-    "icon": "clinic-medical"
+    "icon": "clinic-medical",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "Question": {
+      "type": "string"
+    },
+    "pdfurl": {
       "type": "string"
     },
     "Answer": {

@@ -19,6 +19,12 @@
     "text": {
       "type": "string",
       "required": true
+    },
+    "icons": {
+      "type": "string"
+    },
+    "secondtext": {
+      "type": "string"
     }
   }
 }
