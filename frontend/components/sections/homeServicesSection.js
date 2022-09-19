@@ -4,13 +4,12 @@ import CustomLink from "../elements/custom-link";
 import NextImage from "../elements/image";
 
 function homeServicesSection({ data }) {
-  console.log(data);
   return (
     <div className="bg-white justify-center items-center mt-10 md:mt-24 grid">
       <section className="p-3  justify-center items-center">
         <div className="mx-auto  lg:px-2 justify-center items-center max-w-[1140px]  ">
           <div className="flex max-w-[1140px]  flex-col mt-2 items-center justify-center text-center">
-            <h2 className="max-w-2xl tracking-wide mt-2 text-5xl font-bold leading-snug  text-gray-800 lg:leading-tight lg:text-5xl">
+            <h2 data-text="diensten" className=" lastword max-w-2xl tracking-wide mt-2 text-5xl font-bold leading-snug  text-gray-800 lg:leading-tight lg:text-5xl">
               {data.Title}
             </h2>
             <p className="max-w-4xl py-4 text-lg leading-normal text-gray-400 lg:text-xl xl:text-xl ">

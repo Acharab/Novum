@@ -9,7 +9,11 @@ export default function section({ data }) {
   } else {
     imgpos = "right";
   }
+  //change id to make diensten from home rederict to section
   const idContainer = data.Title === "Omzet belasting" ? "omzetbelasting": data.Title === "Algemeen advies" ? "algemeenadvies" : data.Title === "Jaarrekeningen" ? "jaarrekeningen" : data.Title === "Salarisadministratie" ? "salarisadministratie" : data.Title === "Rapportages" ? "rapportages" : data.Title === "Inkomsten belasting" ? "inkomstenbelasting" : ""
+  //Make lastword blue
+  const dataAtrtibute = data.Title === "Omzet belasting" ? "belasting" : data.Title === "Algemeen advies" ? "advies" : ""
+
   
   return (
     // <section className={`bg-${data.Background} py-36 md:py-20 justify-center items-center`} >
@@ -74,7 +78,7 @@ export default function section({ data }) {
         >
           <div>
             <div className="flex flex-col  md:justify-center lg:pl-6 lg:my-24">
-              <h2 className="max-w-xl text-center mt-3 text-3xl md:text-5xl font-bold leading-relaxed pb-5 tracking-wide text-black lg:leading-tight lg:text-4xl">
+              <h2 data-text={dataAtrtibute} className="lastword max-w-xl text-center mt-3 text-3xl md:text-5xl font-bold leading-relaxed pb-5 tracking-wide text-black lg:leading-tight lg:text-4xl">
                 {data.Title}
               </h2>
 

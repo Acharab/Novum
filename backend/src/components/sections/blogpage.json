@@ -2,11 +2,11 @@
   "collectionName": "components_sections_blogpages",
   "info": {
     "displayName": "Blogpage",
-    "icon": "align-right"
+    "icon": "bacon"
   },
   "options": {},
   "attributes": {
-    "Title": {
+    "title": {
       "type": "string"
     }
   }

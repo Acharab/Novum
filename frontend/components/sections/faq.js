@@ -8,7 +8,7 @@ export default function faq({ data }) {
           <div className="text-grey-700">
             <div className="container grid justify-center px-5 py-24 mx-auto ">
               <div className="text-center  mb-20 grid grid-cols-2 py-12">
-                <h1 data-text="lastword" className="lg:text-6xl whitespace-nowrap md:text-5xl content[attr(data-text)]  text-3xl lg:font-semibold lg:text-start lg:title-font text-gray-900 mb-3 after:text-blue-500">
+                <h1 data-text="vragen" className="lastword lg:text-6xl whitespace-nowrap md:text-5xl content[attr(data-text)]  text-3xl lg:font-semibold lg:text-start lg:title-font text-gray-900 mb-3">
                   Veel Gestelde vragen
                 </h1>
               </div>

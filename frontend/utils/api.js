@@ -114,6 +114,9 @@ export async function getPageData({ slug, locale, preview }) {
                       type
                     }
                   }
+                  ... on ComponentSectionsBlogpage{
+                    title
+                  }
                   ... on ComponentSectionsFaq{
                     id
                     Faqtoggles {
@@ -122,9 +125,8 @@ export async function getPageData({ slug, locale, preview }) {
                       pdfurl
                     }
                   }
-                  ... on ComponentSectionsBlogpage{
-                    Title
-                  }
+                  
+                  
                   ... on ComponentSectionsTeams{
                     Teamcards{
                       Image{
@@ -307,7 +309,10 @@ export async function getGlobalData(locale) {
                   text
                 }
                 navbar {
-                  logo {
+                  logoWhite {
+                    ...FileParts
+                  }
+                  logoBlack{
                     ...FileParts
                   }
                   background
@@ -325,6 +330,18 @@ export async function getGlobalData(locale) {
                     type
                   }
                 }
+                
+                Blogs{
+                  id
+                  BlogTitle
+                  BlogContent
+                  BlogImage{
+                    ...FileParts
+                  }
+                  Description
+                  Category
+                  }
+                
                 footer {
                   logo {
                     ...FileParts

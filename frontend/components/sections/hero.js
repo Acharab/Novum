@@ -17,12 +17,15 @@ export default function Hero({ data }) {
   }
   return (
     <section
-      className={`bg-${color} text-${text} md:py-16 lg:py-8 xl:py-0 py-52 w-screen`}
+      className={`bg-${color} text-${text} md:py-16 lg:py-0 xl:py-0 py-52 w-screen`}
     >
       <div className="max-w-[1140px] lg:gap-10 lg:flex-nowrap h-fit container p-8 mx-auto xl:px-0">
         <div className="flex">
           <div className="grid place-content-center max-w-[100%]">
-            <h1 className="text-4xl font-bold h-fit md:pr-8 md:text-5xl max-w-[100%]  leading-snug    lg:text-7xl lg:leading-tight  xl:leading-tight tracking-wide">
+            <h1
+              
+              className=" text-4xl font-bold h-fit md:pr-8 md:text-5xl max-w-[100%]  leading-snug    lg:text-7xl lg:leading-tight  xl:leading-tight tracking-wide "
+            >
               {data.Title}
             </h1>
 
@@ -36,18 +39,17 @@ export default function Hero({ data }) {
             }
             {data.Buttons !== null && (
               <CustomLink link={data.Buttons} key={data.Buttons.id}>
-              <button className="flex-auto  flex space-x-7 lg:items-start  sm:flex">
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  className="px-8 py-4 sm:items-center  text-base font-medium text-center ease-in duration-300 hover:bg-orange-500 hover:text-white   text-orange-500 border-2 border-orange-500 rounded"
-                >
-                  <span className="pr-2">{data.Buttons.text}</span>
-                </a>
-              </button>
-            </CustomLink>
+                <button className="flex-auto  flex space-x-7 lg:items-start  sm:flex">
+                  <a
+                    target="_blank"
+                    rel="noopener"
+                    className="px-8 py-4 sm:items-center  text-base font-medium text-center ease-in duration-300 hover:bg-orange-500 hover:text-white   text-orange-500 border-2 border-orange-500 rounded"
+                  >
+                    <span className="pr-2">{data.Buttons.text}</span>
+                  </a>
+                </button>
+              </CustomLink>
             )}
-            
           </div>
 
           <div className="max-w-6xl hidden md:block p-14 pt-10 lg:flex items-center place-content-center lg:w-1/2 lg:px-1 lg:pt-24 lg:pb-24">

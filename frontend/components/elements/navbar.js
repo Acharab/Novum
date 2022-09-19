@@ -32,8 +32,19 @@ const Navbar = ({ navbar, pageContext }) => {
       ? "black"
       : router.asPath === "/contact"
       ? "black"
-      : "";
+      : router.asPath === "/blog"
+      ? "white": "";
   let text;
+  //choose black and white logo
+  let logo;
+  if(background === "white"){
+    logo = navbar.logoBlack
+  }
+  else{
+    logo = navbar.logoWhite
+  }
+
+  
   if (background === "black") {
     text = "white";
   }
@@ -48,7 +59,7 @@ const Navbar = ({ navbar, pageContext }) => {
           {/* Content aligned to the left */}
           <Link href="/">
             <a className="">
-              <NextImage width="200" height="75" media={navbar.logo} />
+              <NextImage width="200" height="75" media={logo} />
             </a>
           </Link>
           <div className="flex flex-row items-center">
