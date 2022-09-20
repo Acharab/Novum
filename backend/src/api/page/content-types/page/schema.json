@@ -51,7 +51,9 @@
         "sections.teams",
         "sections.contact",
         "sections.aboutus",
-        "sections.blogpage"
+        "sections.blogpage",
+        "sections.homeblog",
+        "sections.empty"
       ],
       "pluginOptions": {
         "i18n": {

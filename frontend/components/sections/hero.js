@@ -15,16 +15,22 @@ export default function Hero({ data }) {
   if (color === "white") {
     text = "black";
   }
+  const dataAtrtibute =
+    data.Title === "Administratie kantoor"
+      ? "kantoor"
+      : data.Title === "Over ons"
+      ? "ons"
+      : "";
   return (
     <section
       className={`bg-${color} text-${text} md:py-16 lg:py-0 xl:py-0 py-52 w-screen`}
     >
-      <div className="max-w-[1140px] lg:gap-10 lg:flex-nowrap h-fit container p-8 mx-auto xl:px-0">
+      <div className=" lg:gap-10 lg:flex-nowrap h-fit container p-8 mx-auto xl:px-0">
         <div className="flex">
           <div className="grid place-content-center max-w-[100%]">
             <h1
-              
-              className=" text-4xl font-bold h-fit md:pr-8 md:text-5xl max-w-[100%]  leading-snug    lg:text-7xl lg:leading-tight  xl:leading-tight tracking-wide "
+              data-text={dataAtrtibute}
+              className="lastwordsecendary text-4xl font-bold h-fit md:pr-8 md:text-5xl max-w-[100%]  leading-snug    lg:text-7xl lg:leading-tight  xl:leading-tight tracking-wide "
             >
               {data.Title}
             </h1>

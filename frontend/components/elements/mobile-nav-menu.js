@@ -17,7 +17,7 @@ const MobileNavMenu = ({ navbar, closeSelf }) => {
         {/* Top section */}
         <div className="flex flex-row justify-between py-2 items-center">
           {/* Company logo */}
-          <NextImage width="200" height="70" media={navbar.logo} />
+          <NextImage width="200" height="70" media={navbar.logoBlack} />
           {/* Close button */}
           <button onClick={closeSelf} className="py-1 px-1">
             <MdClose className="h-8 w-auto" />
@@ -30,7 +30,7 @@ const MobileNavMenu = ({ navbar, closeSelf }) => {
               <li key={navLink.id} className="block w-full">
                 <CustomLink link={navLink}>
                   <div className="hover:text-gray-900 py-6 flex flex-row justify-center text-3xl items-center">
-                    <span>{navLink.text}</span>
+                    <span className="text-orange-500">{navLink.text}</span>
                   </div>
                 </CustomLink>
               </li>

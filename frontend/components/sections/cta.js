@@ -37,7 +37,7 @@ export default function Cta({ data }) {
             key={data.Buttons.id}
           >
             <div className="md:mt-[1rem] md:py-0 py-2">
-              <button className="inline-block md:pl-5 md:ml-2 md:item-center  md:text-center mx-auto text-xl sm:text-2xl pl-0 ml-0  lg:text-center text-white font-bold  border-2 sm:px-7  py-4 sm:text-center ">
+              <button className="inline-block md:pl-5 md:ml-2 md:item-center  md:text-center mx-auto text-xl sm:text-2xl pl-0 ml-0  lg:text-center text-white font-bold  border-2 hover:rounded-md ease-in duration-300 sm:px-7  py-4 sm:text-center ">
                 {data.Buttons.text}
               </button>
             </div>

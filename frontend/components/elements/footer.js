@@ -4,13 +4,20 @@ import NextImage from "./image";
 import CustomLink from "./custom-link";
 
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelope, faPhone, faMessage, faLocationDot,faArrowUpRightFromSquare, faFolderOpen } from "@fortawesome/free-solid-svg-icons"
+import {
+  faEnvelope,
+  faPhone,
+  faMessage,
+  faLocationDot,
+  faArrowUpRightFromSquare,
+  faFolderOpen,
+  faHeart,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
-
+import Link from "next/link";
 
 const Footer = ({ footer }) => {
-
   return (
     <footer className="pt-12 bg-black">
       <div className="container flex flex-col lg:flex-row lg:justify-between">
@@ -25,7 +32,7 @@ const Footer = ({ footer }) => {
               key={footerColumn.id}
               className="mt-10 lg:mt-0 w-6/12 lg:w-auto"
             >
-              <p className="uppercase tracking-wide font-semibold text-white">
+              <p className="uppercase tracking-wide font-semibold text-orange-500">
                 {footerColumn.title}
               </p>
               <ul className="mt-2">
@@ -35,36 +42,52 @@ const Footer = ({ footer }) => {
                     className="text-gray-300 py-1 px-1 -mx-1 hover:text-white"
                   >
                     {link.icons == "Phone" && (
-                      <FontAwesomeIcon className="mr-2" icon={faPhone} />
+                      <FontAwesomeIcon
+                        className="mr-2 text-orange-500 fill-orange-500"
+                        icon={faPhone}
+                      />
                     )}
                     {link.icons == "Email" && (
-                      <FontAwesomeIcon className="mr-2" icon={faEnvelope} />
+                      <FontAwesomeIcon
+                        className="mr-2 text-orange-500 fill-orange-500"
+                        icon={faEnvelope}
+                      />
                     )}
                     {link.icons == "Location" && (
-                      <FontAwesomeIcon className="mr-2" icon={faLocationDot} />
+                      <FontAwesomeIcon
+                        className="mr-2 text-orange-500 fill-orange-500"
+                        icon={faLocationDot}
+                      />
                     )}
                     {link.icons == "Linkedin" && (
-                     <FontAwesomeIcon className="mr-2" icon={faLinkedin} />
+                      <FontAwesomeIcon
+                        className="mr-2 text-orange-500 fill-orange-500"
+                        icon={faLinkedin}
+                      />
                     )}
                     {link.icons == "extern" && (
-                     <FontAwesomeIcon className="mr-2" icon={faArrowUpRightFromSquare} />
+                      <FontAwesomeIcon
+                        className="mr-2 text-orange-500 fill-orange-500"
+                        icon={faArrowUpRightFromSquare}
+                      />
                     )}
                     {link.icons == "folder" && (
-                     <FontAwesomeIcon className="mr-2" icon={faFolderOpen} />
+                      <FontAwesomeIcon
+                        className="mr-2 text-orange-500 fill-orange-500"
+                        icon={faFolderOpen}
+                      />
                     )}
                     {link.icons == "Message" && (
-                     <FontAwesomeIcon className="mr-2" icon={faMessage} />
+                      <FontAwesomeIcon
+                        className="mr-2 text-orange-500 fill-orange-500"
+                        icon={faMessage}
+                      />
                     )}
-                    {link.icons !== null && (
-                      ""
-                    )}
+                    {link.icons !== null && ""}
                     <CustomLink taget="_blank" link={link}>
                       {link.text}
                       <br></br>
-                      <div className="ml-5">
-                      {link.secondtext}
-                      </div>
-                      
+                      <div className="ml-5">{link.secondtext}</div>
                     </CustomLink>
                   </li>
                 ))}
@@ -73,8 +96,21 @@ const Footer = ({ footer }) => {
           ))}
         </nav>
       </div>
-      <div className="text-sm text-gray-300 py-6">
-        <div className="container">{footer.smallText}</div>
+      <div className="text-sm text-gray-300 mb-6 ">
+        <div className="container flex">
+          <div>{footer.smallText}</div>
+          <div className="text-white fill-white">
+            <FontAwesomeIcon
+              className="px-5 text-orange-500 fill-orange-500"
+              icon={faHeart}
+            />
+          </div>
+          <div>
+            <Link className="cursor-pointer " href={footer.url}>
+                <p className="hover:text-orange-500 ease-in duration-300 cursor-pointer">{footer.urltext}</p>
+            </Link>
+          </div>
+        </div>
       </div>
     </footer>
   );

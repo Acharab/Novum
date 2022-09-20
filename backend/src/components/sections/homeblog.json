@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_sections_homeblogs",
+  "info": {
+    "displayName": "Homeblog",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    }
+  }
+}

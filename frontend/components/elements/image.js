@@ -24,7 +24,7 @@ const NextImage = ({ media, ...props }) => {
       layout="responsive"
       width={width || "100%"}
       height={height || "100%"}
-      objectFit="contain"
+      objectFit="fill"
       src={url}
       alt={alternativeText || ""}
     />

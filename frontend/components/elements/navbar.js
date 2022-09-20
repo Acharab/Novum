@@ -33,18 +33,25 @@ const Navbar = ({ navbar, pageContext }) => {
       : router.asPath === "/contact"
       ? "black"
       : router.asPath === "/blog"
-      ? "white": "";
+      ? "white"
+      : router.asPath === "/blogitemfirst"
+      ? "white"
+      : router.asPath === "/blogitemsecond"
+      ? "white"
+      : router.asPath === "/blogitemthird"
+      ? "white"
+      : router.asPath === "/blogitemfourth"
+      ? "white"
+      : "";
   let text;
   //choose black and white logo
   let logo;
-  if(background === "white"){
-    logo = navbar.logoBlack
-  }
-  else{
-    logo = navbar.logoWhite
+  if (background === "white") {
+    logo = navbar.logoBlack;
+  } else {
+    logo = navbar.logoWhite;
   }
 
-  
   if (background === "black") {
     text = "white";
   }
@@ -54,23 +61,24 @@ const Navbar = ({ navbar, pageContext }) => {
   return (
     <>
       {" "}
-      <nav className={`bg-${background} text-${text} py-6 sm:py-2`}>
-        <div className="container flex flex-row items-center justify-between">
+      <div className={`bg-${background} text-${text}`}>
+      <nav className={`py-6 sm:py-2 container`}>
+        <div className=" flex flex-row items-center justify-between">
           {/* Content aligned to the left */}
           <Link href="/">
             <a className="">
               <NextImage width="200" height="75" media={logo} />
             </a>
           </Link>
-          <div className="flex flex-row items-center">
+          <div className="flex flex-row items-center ">
             {/* List of links on desktop */}
             <ul
-              className={`hidden list-none md:flex flex-row gap-4 justify-center items-center ml-10`}
+              className={`hidden list-none md:flex flex-row gap-4  justify-center items-center`}
             >
               {navbar.links.map((navLink) => (
                 <li key={navLink.id}>
                   <CustomLink link={navLink} locale={router.locale}>
-                    <div className=" px-2 py-1">{navLink.text}</div>
+                    <div className="hover:text-orange-500 duration-300 ease-in py-1">{navLink.text}</div>
                   </CustomLink>
                 </li>
               ))}
@@ -99,6 +107,7 @@ const Navbar = ({ navbar, pageContext }) => {
           </div>
         </div>
       </nav>
+      </div>
       {/* Mobile navigation menu panel */}
       {mobileMenuIsShown && (
         <MobileNavMenu

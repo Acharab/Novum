@@ -7,7 +7,7 @@ function homeServicesSection({ data }) {
   return (
     <div className="bg-white justify-center items-center mt-10 md:mt-24 grid">
       <section className="p-3  justify-center items-center">
-        <div className="mx-auto  lg:px-2 justify-center items-center max-w-[1140px]  ">
+        <div className="mx-auto  lg:px-2 justify-center items-center container  ">
           <div className="flex max-w-[1140px]  flex-col mt-2 items-center justify-center text-center">
             <h2 data-text="diensten" className=" lastword max-w-2xl tracking-wide mt-2 text-5xl font-bold leading-snug  text-gray-800 lg:leading-tight lg:text-5xl">
               {data.Title}
@@ -34,12 +34,12 @@ function homeServicesSection({ data }) {
                   {card.Title}
                 </h3>
                 <div>
-                  <p className="text-gray-500 justify-start text-justify ">
+                  <p className="text-gray-500 justify-start text-justify  ">
                     {card.Description}
                   </p>
-                  <div className="md:pt-5 pt-2">
+                  <div className="md:py-5">
                     <CustomLink className="w-max" link={card.Buttons}>
-                      <button className="font-bold text-xl text-blue-500 w-[9rem] p-3 text-center border-2 border-blue-500 ease-in duration-300 hover:text-white hover:bg-blue-500 rounded">
+                      <button className="font-bold text-xl text-blue-500 w-[9rem] p-2 text-center border-2 border-blue-500 ease-in duration-300 hover:text-white hover:bg-blue-500 rounded">
                         {card.Buttons.text}
                       </button>
                     </CustomLink>
@@ -54,14 +54,14 @@ function homeServicesSection({ data }) {
                 href=""
                 target="_blank"
                 rel="noopener"
-                className="px-8 p-10 mr-10 py-4 sm:items-center items-stretch text-xl font-medium text-center ease-in duration-300 hover:bg-orange-500 hover:text-white text-orange-500 border-2 border-orange-500 rounded  "
+                className="w-100 p-10  py-4 sm:items-center items-stretch text-xl font-medium text-center ease-in duration-300 hover:bg-orange-500 hover:text-white text-orange-500 border-2 border-orange-500 rounded  "
               >
-                <span className="pr-2">Diensten</span>
+                <span className="">Diensten</span>
               </a>
             </div>
           </Link>
         </div>
-        <div className="bg-white pb-14">
+        <div className="bg-white pb-14 container">
           <div className="flex flex-col justify-center">
             <div className="flex flex-wrap justify-center gap-5 md:justify-around">
               {

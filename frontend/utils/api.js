@@ -125,6 +125,10 @@ export async function getPageData({ slug, locale, preview }) {
                       pdfurl
                     }
                   }
+                  ... on ComponentSectionsHomeblog{
+                    id
+                    title
+                  }
                   
                   
                   ... on ComponentSectionsTeams{
@@ -154,7 +158,9 @@ export async function getPageData({ slug, locale, preview }) {
                       }
                     }
                   }
-                  
+                  ... on ComponentSectionsEmpty{
+                    title
+                  }
                   ... on ComponentSectionsRevieuw{
                     id
                     cards{
@@ -334,6 +340,7 @@ export async function getGlobalData(locale) {
                 Blogs{
                   id
                   BlogTitle
+                  Slug
                   BlogContent
                   BlogImage{
                     ...FileParts
@@ -346,6 +353,8 @@ export async function getGlobalData(locale) {
                   logo {
                     ...FileParts
                   }
+                  url
+                  urltext
                   smallText
                   columns {
                     id

@@ -10,14 +10,18 @@ import "swiper/css/scrollbar";
 // Import Swiper styles
 import "swiper/css";
 import NextImage from "../elements/image";
+import Link from "next/link";
 
-function homeBlog({ data }) {
+function Homeblog({ data, global }) {
+  let blogs = global.attributes.Blogs;
+  blogs = blogs.slice(-4)
+
   const slides = [];
-  data.Images.map((image, id) => {
+  blogs.map((image, id) => {
     slides.push(
-      <SwiperSlide className="w-96" key={{id}}>
+      <SwiperSlide className="w-96" key={{ id }}>
         <div className="h-fit flex justify-center">
-          <NextImage src={image} width={500} height={500} />
+          <NextImage media={image.BlogImage} width={500} height={500} />
         </div>
       </SwiperSlide>
     );
@@ -46,57 +50,25 @@ function homeBlog({ data }) {
           </Swiper>
         </div>
         <div className="md:w-3/6 pt-8 h-fill grid justify-center">
-          <Link href="#">
-            <div className="mb-6 border-2 hover:cursor-pointer rounded p-3">
-              <h3 className="text-white font-bold text-xl">
-                Hoe kunt u geld besparen bij u aangiften?
-              </h3>
-              <a className="text-white">
-                Lorem si zolem i lo si mo deminium si lopikum si halon di parma
-                di solitaier
-              </a>
+          {blogs.map((blog, id) => (
+            <div className="" key={id}>
+              <Link href={`/${blog.Slug}`}>
+                <div className="mb-6  border-2 border-gray-300 hover:border-white ease-in duration-500 hover:cursor-pointer hover:rounded p-3">
+                  <h3 className="text-white font-bold text-xl">
+                    {blog.BlogTitle}
+                  </h3>
+                  <a className="text-white">
+                    {blog.Description}
+                  </a>
+                </div>
+              </Link>
             </div>
-          </Link>
-
-          <Link href="#">
-            <div className="mb-6 border-2 hover:cursor-pointer rounded p-3">
-              <h3 className="text-white font-bold text-xl">
-                Wat zijn onze specialiteiten?
-              </h3>
-              <a className="text-white">
-                Lorem si zolem i lo si mo deminium si lopikum si halon di parma
-                di solitaier
-              </a>
-            </div>
-          </Link>
-
-          <Link href="#">
-            <div className="mb-6 border-2 hover:cursor-pointer rounded p-3">
-              <h3 className="text-white font-bold text-xl">
-                Wanneer kunnen wij u helpen?
-              </h3>
-              <a className="text-white">
-                Lorem si zolem i lo si mo deminium si lopikum si halon di parma
-                di solitaier
-              </a>
-            </div>
-          </Link>
-
-          <Link href="#">
-            <div className="mb-6 border-2 hover:cursor-pointer rounded p-3">
-              <h3 className="text-white font-bold text-xl">
-                Wij gaan verhuizen naar een nieuw pand!
-              </h3>
-              <a className="text-white">
-                Lorem si zolem i lo si mo deminium si lopikum si halon di parma
-                di solitaier
-              </a>
-            </div>
-          </Link>
+          ))}
         </div>
       </div>
     </section>
   );
 }
 
-export default homeBlog;
+export default Homeblog;
+

@@ -19,7 +19,6 @@ export default function advantages({ data }) {
                 <h2 className=" justify-center flex gap-5  mt-3 text-xl font-bold leading-relaxed pb-5 tracking-tight text-gray-000 lg:leading-tight lg:text-xl">
                   <NextImage media={advantage.Image} className="text-3xl" width="60px" height="60px" />{" "}
                   <div className="text-center items-center flex">
-
                   {advantage.Title}
                   </div>
                 </h2>
