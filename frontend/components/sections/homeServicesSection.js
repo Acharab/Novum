@@ -12,7 +12,7 @@ function homeServicesSection({ data }) {
             <h2 data-text="diensten" className=" lastword max-w-2xl tracking-wide mt-2 text-5xl font-bold leading-snug  text-gray-800 lg:leading-tight lg:text-5xl">
               {data.Title}
             </h2>
-            <p className="max-w-4xl py-4 text-lg leading-normal text-gray-400 lg:text-xl xl:text-xl ">
+            <p className="max-w-4xl py-8 text-lg leading-normal text-gray-400 lg:text-xl xl:text-xl ">
               {data.Description}
             </p>
           </div>
@@ -24,20 +24,20 @@ function homeServicesSection({ data }) {
                 key={card.id}
               >
                 <NextImage
-                  className="z-10 object-cover rounded"
+                  className="z-10 pb-5"
                   media={card.Image}
-                  width="85"
-                  height="85"
+                  width="70"
+                  height="70"
                   alt="Hero jpeg"
                 />
-                <h3 className="mb-2 whitespace-nowrap text-3xl font-bold ">
+                <h3 className="py-2 whitespace-nowrap text-3xl font-bold ">
                   {card.Title}
                 </h3>
                 <div>
-                  <p className="text-gray-500 justify-start text-justify  ">
+                  <p className="text-gray-500 justify-start text-justify  pt-2">
                     {card.Description}
                   </p>
-                  <div className="md:py-5">
+                  <div className="md:py-7">
                     <CustomLink className="w-max" link={card.Buttons}>
                       <button className="font-bold text-xl text-blue-500 w-[9rem] p-2 text-center border-2 border-blue-500 ease-in duration-300 hover:text-white hover:bg-blue-500 rounded">
                         {card.Buttons.text}
@@ -61,7 +61,7 @@ function homeServicesSection({ data }) {
             </div>
           </Link>
         </div>
-        <div className="bg-white pb-14 container">
+        <div className="bg-white pb-14 ">
           <div className="flex flex-col justify-center">
             <div className="flex flex-wrap justify-center gap-5 md:justify-around">
               {

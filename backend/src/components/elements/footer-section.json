@@ -3,12 +3,21 @@
   "info": {
     "name": "FooterSection",
     "displayName": "Footer section",
-    "icon": "chevron-circle-down"
+    "icon": "chevron-circle-down",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "title": {
       "type": "string"
+    },
+    "noab": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": false
     },
     "links": {
       "type": "component",

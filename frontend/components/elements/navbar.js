@@ -73,7 +73,7 @@ const Navbar = ({ navbar, pageContext }) => {
           <div className="flex flex-row items-center ">
             {/* List of links on desktop */}
             <ul
-              className={`hidden list-none md:flex flex-row gap-4  justify-center items-center`}
+              className={`hidden list-none md:flex flex-row md:gap-10  justify-center items-center`}
             >
               {navbar.links.map((navLink) => (
                 <li key={navLink.id}>

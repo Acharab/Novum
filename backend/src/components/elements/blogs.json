@@ -32,6 +32,9 @@
     },
     "Slug": {
       "type": "string"
+    },
+    "readmore": {
+      "type": "richtext"
     }
   }
 }

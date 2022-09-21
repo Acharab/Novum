@@ -8,7 +8,7 @@ function revieuw({data}) {
   return (
     <div className="bg-gray-100">
       <div className=" justify-center items-center">
-        <div className="flex flex-wrap max-w-[1140px] py-20 lg:gap-10 lg:flex-nowrap h-fit container p-8 mx-auto xl:px-0">
+        <div className="flex flex-wrap  py-20 lg:gap-10 lg:flex-nowrap h-fit container p-8 mx-auto xl:px-0">
           <div className="grid md:grid-cols-3 md:grid-rows-1 gap-x-[14px] gap-y-[14px] grid-cols-1 grid-rows-3">
             {data.cards.map((card) => (
                 // console.log(card.Name);

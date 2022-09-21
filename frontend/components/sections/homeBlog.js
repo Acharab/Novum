@@ -12,7 +12,10 @@ import "swiper/css";
 import NextImage from "../elements/image";
 import Link from "next/link";
 
+
+
 function Homeblog({ data, global }) {
+  
   let blogs = global.attributes.Blogs;
   blogs = blogs.slice(-4)
 
@@ -21,7 +24,7 @@ function Homeblog({ data, global }) {
     slides.push(
       <SwiperSlide className="w-96" key={{ id }}>
         <div className="h-fit flex justify-center">
-          <NextImage media={image.BlogImage} width={500} height={500} />
+          <NextImage className="object-cover" media={image.BlogImage} width={500} height={500} />
         </div>
       </SwiperSlide>
     );
@@ -29,31 +32,34 @@ function Homeblog({ data, global }) {
 
   return (
     <section className="bg-blue-500 justify-center items-center">
-      <div className="grid grid-cols-1 md:flex md:flex-wrap max-w-[1140px]  py-20 lg:gap-10 lg:flex-nowrap h-fit container p-8 mx-auto xl:px-0">
-        <div className="md:w-3/6 h-fill">
+      <div className="grid grid-cols-1 md:flex md:flex-wrap   py-20 lg:gap-10 lg:flex-nowrap h-fit container p-8 mx-auto xl:px-0">
+      <div className="md:w-3/6   grid  ">
           <Swiper
             id="Courasel"
-            className="w-full h-fill ml-0"
+            className="w-full object-cover"
             modules={[
               Pagination,
               Scrollbar,
               A11y,
               EffectFade,
-              Scrollbar,
               Navigation,
             ]}
+            
             spaceBetween={100}
             slidesPerView={1}
+            
             scrollbar={{ draggable: true }}
           >
-            <div>{slides}</div>
+            <div className="object-cover aspect-square">{slides}</div>
           </Swiper>
         </div>
-        <div className="md:w-3/6 pt-8 h-fill grid justify-center">
+        <div className=" md:w-3/6 flex my-10 m-auto justify-center content-center">
+        <div className="h-auto m-auto">
+        <div className="  grid   justify-center">
           {blogs.map((blog, id) => (
-            <div className="" key={id}>
+            <div className=" " key={id}>
               <Link href={`/${blog.Slug}`}>
-                <div className="mb-6  border-2 border-gray-300 hover:border-white ease-in duration-500 hover:cursor-pointer hover:rounded p-3">
+                <div className="lg:mb-3 mb-2  border-2 max-h[10vh] hover:cursor-pointer rounded p-3 ">
                   <h3 className="text-white font-bold text-xl">
                     {blog.BlogTitle}
                   </h3>
@@ -64,6 +70,8 @@ function Homeblog({ data, global }) {
               </Link>
             </div>
           ))}
+        </div>
+        </div>
         </div>
       </div>
     </section>

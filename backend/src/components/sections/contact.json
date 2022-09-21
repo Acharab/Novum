@@ -2,12 +2,16 @@
   "collectionName": "components_sections_contacts",
   "info": {
     "displayName": "Contact",
-    "icon": "user-check"
+    "icon": "user-check",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "Privacystatement": {
+    "title": {
       "type": "string"
+    },
+    "description": {
+      "type": "richtext"
     }
   }
 }

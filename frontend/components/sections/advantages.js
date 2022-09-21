@@ -4,7 +4,7 @@ import NextImage from "../elements/image";
 export default function advantages({ data }) {
   return (
     <div className="bg-white justify-center items-center ">
-      <div className="flex flex-wrap max-w-[1140px]  py-10 lg:gap-10 lg:flex-nowrap container p-8 mx-auto xl:px-0">
+      <div className="flex flex-wrap   py-10 lg:gap-10 lg:flex-nowrap container p-8 mx-auto xl:px-0">
         <div className={`flex items-center justify-center w-full lg:w-1/2`}>
           <NextImage media={data.Image} width="510" height="480" />
         </div>
@@ -23,7 +23,7 @@ export default function advantages({ data }) {
                   </div>
                 </h2>
                 
-                <p className=" py-5  leading-normal text-gray-400   text-center  dark:text-gray-300">
+                <p className=" py-5  leading-normal text-gray-400 text-justify    max-w-[450px]  dark:text-gray-300">
                   {advantage.Description}
                 </p>
               </div>

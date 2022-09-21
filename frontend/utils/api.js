@@ -175,9 +175,9 @@ export async function getPageData({ slug, locale, preview }) {
                   }
                   ... on ComponentSectionsContact{
                     id
-                    Privacystatement
+                    title
+                    description
                   }
-
                   ... on ComponentSectionsAboutus {
                     id
                     Title
@@ -187,6 +187,7 @@ export async function getPageData({ slug, locale, preview }) {
                     }
                   }
                   ... on ComponentSectionsHero{
+                    lastword
                     id
                     Title
                     bg
@@ -229,6 +230,7 @@ export async function getPageData({ slug, locale, preview }) {
                   }
                   
                   ... on ComponentSectionsSection{
+                    lastword
                     id
                     Title
                     Description
@@ -341,6 +343,7 @@ export async function getGlobalData(locale) {
                   id
                   BlogTitle
                   Slug
+                  readmore
                   BlogContent
                   BlogImage{
                     ...FileParts
@@ -353,10 +356,14 @@ export async function getGlobalData(locale) {
                   logo {
                     ...FileParts
                   }
+                  
                   url
                   urltext
                   smallText
                   columns {
+                    noab{
+                      ...FileParts
+                    }
                     id
                     title
                     links {

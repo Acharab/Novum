@@ -26,16 +26,6 @@ export default function section({ data }) {
       ? "inkomstenbelasting"
       : "";
   //Make lastword blue
-  const dataAtrtibute =
-      data.Title === "Omzet belasting"
-      ? "belasting"
-      : data.Title === "Algemeen advies"
-      ? "advies"
-      : data.Title === "Over ons"
-      ? "ons":data.Title === "Inkomstenbelasting"
-      ? "belasting"
-      :data.Title === "Salarisadministratie"
-      ? "administratie":"";
 
   
 
@@ -45,19 +35,20 @@ export default function section({ data }) {
       className={`flex items-center justify-center bg-${data.Background}`}
       id={idContainer}
     >
-      <div className="flex flex-wrap max-w-[1140px]  py-10 lg:gap-10 lg:flex-nowrap container p-6 mx-auto xl:px-0">
+      <div className="container">
+      <div className="flex flex-wrap  py-10 lg:gap-10 lg:flex-nowrap container p-6 mx-auto xl:px-0">
         <div
-          className={`flex flex-wrap items-left lg:justify-start justify-center w-full lg:w-1/2 ${
+          className={`flex flex-wrap items-left  justify-center w-full lg:w-1/2 ${
             imgpos === "left" ? " lg:order-1" : ""
           }`}
         >
           <div>
             <div className="flex flex-col  md:justify-center  lg:my-24">
               <h2
-                data-text={dataAtrtibute}
+                data-text={data.lastword}
                 className="lastword  max-w-xl text-left mt-3 text-3xl md:text-5xl font-bold leading-relaxed pb-5 tracking-wide text-black lg:leading-tight lg:text-4xl"
               >
-                {data.Title}
+                {data.Title}{data.lastword}
               </h2>
 
               <p className="max-w-lg py-5 text-left leading-normal text-gray-500 text-base   dark:text-gray-300">
@@ -75,7 +66,7 @@ export default function section({ data }) {
         </div>
 
         <div
-          className={`flex flex-wrap items-center lg:justify-start  justify-center w-full lg:w-auto ${
+          className={`flex flex-wrap items-center   justify-center w-full lg:w-auto ${
             imgpos === "left" ? "lg:justify-end" : ""
           }`}
         >
@@ -99,6 +90,7 @@ export default function section({ data }) {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </div>
   );

@@ -16,8 +16,10 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import Link from "next/link";
+import Image from "next/image";
 
 const Footer = ({ footer }) => {
+  // console.log(footer);
   return (
     <footer className="pt-12 bg-black">
       <div className="container flex flex-col lg:flex-row lg:justify-between">
@@ -92,6 +94,21 @@ const Footer = ({ footer }) => {
                   </li>
                 ))}
               </ul>
+              {/* dont put a title to have it working */}
+              {footerColumn.title === null && 
+                <Link href="https://noab.nl/">
+                  <div className="cursor-pointer">
+                    <NextImage
+                      className="bg-gray-300 rounded-full cursor-pointer"
+                      height={120}
+                      width={120}
+                      media={footerColumn.noab}
+                    />
+                    {console.log(footerColumn.noab)}
+                    {console.log(footerColumn.noab)}
+                  </div>
+                </Link>
+              }
             </div>
           ))}
         </nav>
@@ -101,13 +118,15 @@ const Footer = ({ footer }) => {
           <div>{footer.smallText}</div>
           <div className="text-white fill-white">
             <FontAwesomeIcon
-              className="px-5 text-orange-500 fill-orange-500"
+              className="px-3 text-orange-500 fill-orange-500"
               icon={faHeart}
             />
           </div>
           <div>
             <Link className="cursor-pointer " href={footer.url}>
-                <p className="hover:text-orange-500 ease-in duration-300 cursor-pointer">{footer.urltext}</p>
+              <p className="hover:text-orange-500 ease-in duration-300 cursor-pointer">
+                {footer.urltext}
+              </p>
             </Link>
           </div>
         </div>

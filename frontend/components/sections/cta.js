@@ -7,7 +7,7 @@ import CustomLink from "../elements/custom-link";
 export default function Cta({ data }) {
   return (
     <section className="bg-blue-500">
-    <div className="flex flex-wrap justify-center max-w-[1140px]  lg:gap-10 lg:flex-nowrap h-fit container p-8 mx-auto xl:px-0">
+    <div className="flex flex-wrap justify-center   lg:gap-10 lg:flex-nowrap h-fit container p-8 mx-auto xl:px-0">
       <div className=" md:flex md:justify-evenly grid grid-cols-1 w-screen py-4">
         <div className="align-center md:w-1/3 h-full md:justify-start justify-center grid my-auto">
           <h2 className="flex-innitial h-full place-items-center grid px-3 text-3xl font-bold w-fit lg:text-4xl text-center md:mb-0 mb-6  text-white">
