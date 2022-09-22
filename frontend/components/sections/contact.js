@@ -14,7 +14,7 @@ function Contact({ data }) {
       bedrijf: e.target.dienst.bedrijf,
     };
     let token = "6Lczec8fAAAAANwmMZ6nUWOC7PlMQCnNGxhniCRU";
-    console.log(data)
+    console.log(data);
 
     axios
       .post("http://localhost:1337/api/ezforms/submit", { formData: form })
@@ -145,7 +145,7 @@ function Contact({ data }) {
                     <label class="font-medium ">Naam</label>
                     <input
                       type="text"
-                      class="block w-full px-4 py-4 mt-2 text-xl text-gray-700 placeholder-gray-500 bg-gray-200 rounded-lg focus:outline-none focus:ring-4 focus:ring-blue-600 focus:ring-opacity-50"
+                      class="block w-full px-4 py-4 mt-2 text-xl text-gray-700 placeholder-gray-500 placeholder-shown:text-base bg-gray-200 rounded-lg focus:outline-none focus:ring-4 focus:ring-blue-600 focus:ring-opacity-50"
                       data-primary="blue-600"
                       data-rounded="rounded-lg"
                       placeholder="Uw Naam"
@@ -155,7 +155,7 @@ function Contact({ data }) {
                     <label class="font-medium ">E-mail</label>
                     <input
                       type="text"
-                      class="block w-full px-4 py-4 mt-2 text-xl text-gray-700 placeholder-gray-500 bg-gray-200 rounded-lg focus:outline-none focus:ring-4 focus:ring-blue-600 focus:ring-opacity-50"
+                      class="block w-full px-4 py-4 mt-2 text-xl text-gray-700 placeholder-gray-500 placeholder-shown:text-base bg-gray-200 rounded-lg focus:outline-none focus:ring-4 focus:ring-blue-600 focus:ring-opacity-50"
                       data-primary="blue-600"
                       data-rounded="rounded-lg"
                       placeholder="Uw E-mail"
@@ -165,21 +165,32 @@ function Contact({ data }) {
                     <label class="font-medium ">Bedrijf</label>
                     <input
                       type="text"
-                      class="block w-full px-4 py-4 mt-2 text-xl text-gray-700 placeholder-gray-500 bg-gray-200 rounded-lg focus:outline-none focus:ring-4 focus:ring-blue-600 focus:ring-opacity-50"
+                      class="block w-full px-4 py-4 mt-2 text-xl text-gray-700 placeholder-shown:text-base placeholder-gray-500 bg-gray-200 rounded-lg focus:outline-none focus:ring-4 focus:ring-blue-600 focus:ring-opacity-50"
                       data-primary="blue-600"
                       data-rounded="rounded-lg"
                       placeholder="Uw Bedrijfsnaam"
                     />
                   </div>
                   <div class="relative p-5">
-                    <label class="font-medium ">Telefoonnummer</label>
+                    <label class="font-medium ">Dienst</label>
                     <input
-                      type="text"
-                      class="block w-full px-4 py-4 mt-2 text-xl text-gray-700 placeholder-gray-500 bg-gray-200 rounded-lg focus:outline-none focus:ring-4 focus:ring-blue-600 focus:ring-opacity-50"
+                      type="search"
+                      list="mylist"
+                      class="block w-full px-4 py-4 mt-2 text-xl text-gray-700 placeholder-shown:text-base placeholder-gray-500 bg-gray-200 rounded-lg focus:outline-none focus:ring-4 focus:ring-blue-600 focus:ring-opacity-50"
                       data-primary="blue-600"
                       data-rounded="rounded-lg"
-                      placeholder="Uw Telefoonnummer"
+                      placeholder="Dienst"
                     />
+                      <datalist className="p-5" id="mylist">
+                        <option className="text-base" value="Omzetbelasting" />
+                        <option className="text-base" value="Inkomstenbelasting" />
+                        <option className="text-base" value="Jaarrekeningen" />
+                        <option className="text-base" value="Rapportages" />
+                        <option className="text-base" value="Salarisadministratie" />
+                        <option className="text-base" value="Algemeen advies" />
+
+                      </datalist>
+                    
                   </div>
                 </div>
 
@@ -187,7 +198,7 @@ function Contact({ data }) {
                   <label class="font-medium ">Bericht</label>
                   <textarea
                     type="password"
-                    class="block w-full px-4 py-4 mt-2 text-xl text-gray-700 placeholder-gray-500 bg-gray-200 rounded-lg focus:outline-none focus:ring-4 focus:ring-blue-600 focus:ring-opacity-50 resize-none"
+                    class="block w-full px-4 py-4 mt-2 text-xl text-gray-700 placeholder-shown:text-base placeholder-gray-500 bg-gray-200 rounded-lg focus:outline-none focus:ring-4 focus:ring-blue-600 focus:ring-opacity-50 resize-none"
                     data-primary="blue-600"
                     data-rounded="rounded-lg"
                     placeholder="Uw bericht"

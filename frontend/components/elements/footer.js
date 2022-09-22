@@ -104,8 +104,6 @@ const Footer = ({ footer }) => {
                       width={120}
                       media={footerColumn.noab}
                     />
-                    {console.log(footerColumn.noab)}
-                    {console.log(footerColumn.noab)}
                   </div>
                 </Link>
               }

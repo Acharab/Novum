@@ -41,7 +41,7 @@ function blogpage({ global, data }) {
     >
       <div class="flex grid grid-cols-12 pb-10 sm:px-5 gap-x-8 gap-y-16">
         {Blogs.map((blog, id) => (
-          <div key={id} class="flex flex-col items-start col-span-12 space-y-3 sm:col-span-6 xl:col-span-6 border p-3 rounded-lg border-indigo-500">
+          <div key={id} class="flex flex-col items-start col-span-12 space-y-3 sm:col-span-6  xl:col-span-4 border p-6 rounded-lg border-indigo-500">
             <Link href={blog.Slug} className="block cursor-pointer">
               <NextImage
                 className="object-fill rounded-md cursor-pointer"
@@ -53,7 +53,7 @@ function blogpage({ global, data }) {
             <div class="bg-indigo-500 flex items-center px-3 py-1.5 leading-none rounded-full text-xs font-medium uppercase text-white inline-block">
               <span>{blog.Category}</span>
             </div>
-            <h2 class="text-lg font-bold sm:text-xl md:text-2xl">
+            <h2 class="text-lg font-bold sm:text-sm md:text-2xl">
             {blog.BlogTitle}
             </h2>
             <p class="text-sm text-gray-500 max-w-[500px]">

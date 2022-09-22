@@ -37,7 +37,7 @@ function homeServicesSection({ data }) {
                   <p className="text-gray-500 justify-start text-justify  pt-2">
                     {card.Description}
                   </p>
-                  <div className="md:py-7">
+                  <div className="md:py-7 py-3">
                     <CustomLink className="w-max" link={card.Buttons}>
                       <button className="font-bold text-xl text-blue-500 w-[9rem] p-2 text-center border-2 border-blue-500 ease-in duration-300 hover:text-white hover:bg-blue-500 rounded">
                         {card.Buttons.text}
