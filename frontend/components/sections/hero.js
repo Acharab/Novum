@@ -17,10 +17,13 @@ export default function Hero({ data }) {
   }
   
   return (
-    <div className={`bg-${color} text-${text} md:py-16 lg:py-0 xl:py-0 py-48 z-10 w-screen`}>
+    <div className={`md:bg-${color} herovisuals text-${text} md:py-16 lg:py-0 xl:py-0 py-48 z-10 w-screen relative`}>
     <section
-      className={`container`}
+      className={`container `}
     >
+      {/* <div className="rounded-full bg-transparent border-4 border-orange-500/20 w-52 h-52 absolute top-0 right-0"></div>
+      <div className="rounded-full bg-transparent border-4 border-orange-500/20 w-32 h-52 absolute top-30 left-20"></div>
+      <div className="rounded-full bg-transparent border-4 border-orange-500/20 w-52 h-52 absolute bottom-0 right-0"></div> */}
       <div className=" lg:gap-10 lg:flex-nowrap h-fit container p-8 mx-auto xl:px-0">
         <div className="flex">
           <div className="grid place-content-center max-w-[100%]">

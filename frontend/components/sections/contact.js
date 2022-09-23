@@ -114,69 +114,69 @@ function Contact({ data }) {
         
       </div>
     </form> */}
-      <section class="w-full bg-black tails-selected-element">
-        <div class="mx-auto max-w-7xl">
-          <div class="flex flex-col lg:flex-row">
-            <div class="relative w-full bg-cover lg:w-6/12 xl:w-7/12 ">
-              <div class="relative flex flex-col items-center justify-center w-full h-full px-10 my-20 lg:px-16 lg:my-0">
-                <div class="flex flex-col items-start space-y-8 tracking-tight lg:max-w-3xl">
-                  <div class="relative">
-                    <p class="mb-2 font-medium text-gray-200 uppercase"></p>
-                    <h2 class="text-5xl font-bold text-gray-200 xl:text-6xl">
+      <section className="w-full bg-black tails-selected-element">
+        <div className="mx-auto max-w-7xl">
+          <div className="flex flex-col lg:flex-row">
+            <div className="relative w-full bg-cover lg:w-6/12 xl:w-7/12 ">
+              <div className="relative flex flex-col items-center justify-center w-full h-full px-10 my-20 lg:px-16 lg:my-0">
+                <div className="flex flex-col items-start space-y-8 tracking-tight lg:max-w-3xl">
+                  <div className="relative">
+                    <p className="mb-2 font-medium text-gray-200 uppercase"></p>
+                    <h2 className="text-5xl font-bold text-gray-200 xl:text-6xl">
                       {data.title}
                     </h2>
                   </div>
-                  <p class="text-2xl text-gray-200">{data.description}</p>
+                  <p className="text-2xl text-gray-200">{data.description}</p>
                 </div>
               </div>
             </div>
 
-            <div class="w-full bg-black lg:w-6/12 xl:w-5/12">
-              <div class="flex flex-col items-start justify-start w-full h-full px-10  text-gray-200 ">
+            <div className="w-full bg-black lg:w-6/12 xl:w-5/12">
+              <div className="flex flex-col items-start justify-start w-full h-full px-10  text-gray-200 ">
                 <div className="p-5">
-                  <h4 class="w-full text-5xl font-bold">Contact</h4>
+                  <h4 className="w-full text-5xl font-bold">Contact</h4>
                   <p className="pt-3">
                     Laat gerust een bericht achter en wij komen zo snel modelijk
                     bij u terug
                   </p>
                 </div>
-                <div class="relative w-full grid grid-cols-1 md:grid-cols-2 ">
-                  <div class="relative p-5">
-                    <label class="font-medium ">Naam</label>
+                <div className="relative w-full grid grid-cols-1 md:grid-cols-2 ">
+                  <div className="relative p-5">
+                    <label className="font-medium ">Naam</label>
                     <input
                       type="text"
-                      class="block w-full px-4 py-4 mt-2 text-xl text-gray-700 placeholder-gray-500 placeholder-shown:text-base bg-gray-200 rounded-lg focus:outline-none focus:ring-4 focus:ring-blue-600 focus:ring-opacity-50"
+                      className="block w-full px-4 py-4 mt-2 text-xl text-gray-700 placeholder-gray-500 placeholder-shown:text-base bg-gray-200 rounded-lg focus:outline-none focus:ring-4 focus:ring-blue-600 focus:ring-opacity-50"
                       data-primary="blue-600"
                       data-rounded="rounded-lg"
                       placeholder="Uw Naam"
                     />
                   </div>
-                  <div class="relative p-5">
-                    <label class="font-medium ">E-mail</label>
+                  <div className="relative p-5">
+                    <label className="font-medium ">E-mail</label>
                     <input
                       type="text"
-                      class="block w-full px-4 py-4 mt-2 text-xl text-gray-700 placeholder-gray-500 placeholder-shown:text-base bg-gray-200 rounded-lg focus:outline-none focus:ring-4 focus:ring-blue-600 focus:ring-opacity-50"
+                      className="block w-full px-4 py-4 mt-2 text-xl text-gray-700 placeholder-gray-500 placeholder-shown:text-base bg-gray-200 rounded-lg focus:outline-none focus:ring-4 focus:ring-blue-600 focus:ring-opacity-50"
                       data-primary="blue-600"
                       data-rounded="rounded-lg"
                       placeholder="Uw E-mail"
                     />
                   </div>
-                  <div class="relative p-5">
-                    <label class="font-medium ">Bedrijf</label>
+                  <div className="relative p-5">
+                    <label className="font-medium ">Bedrijf</label>
                     <input
                       type="text"
-                      class="block w-full px-4 py-4 mt-2 text-xl text-gray-700 placeholder-shown:text-base placeholder-gray-500 bg-gray-200 rounded-lg focus:outline-none focus:ring-4 focus:ring-blue-600 focus:ring-opacity-50"
+                      className="block w-full px-4 py-4 mt-2 text-xl text-gray-700 placeholder-shown:text-base placeholder-gray-500 bg-gray-200 rounded-lg focus:outline-none focus:ring-4 focus:ring-blue-600 focus:ring-opacity-50"
                       data-primary="blue-600"
                       data-rounded="rounded-lg"
                       placeholder="Uw Bedrijfsnaam"
                     />
                   </div>
-                  <div class="relative p-5">
-                    <label class="font-medium ">Dienst</label>
+                  <div className="relative p-5">
+                    <label className="font-medium ">Dienst</label>
                     <input
                       type="search"
                       list="mylist"
-                      class="block w-full px-4 py-4 mt-2 text-xl text-gray-700 placeholder-shown:text-base placeholder-gray-500 bg-gray-200 rounded-lg focus:outline-none focus:ring-4 focus:ring-blue-600 focus:ring-opacity-50"
+                      className="block w-full px-4 py-4 mt-2 text-xl text-gray-700 placeholder-shown:text-base placeholder-gray-500 bg-gray-200 rounded-lg focus:outline-none focus:ring-4 focus:ring-blue-600 focus:ring-opacity-50"
                       data-primary="blue-600"
                       data-rounded="rounded-lg"
                       placeholder="Dienst"
@@ -194,20 +194,20 @@ function Contact({ data }) {
                   </div>
                 </div>
 
-                <div class="w-[100%] p-5">
-                  <label class="font-medium ">Bericht</label>
+                <div className="w-[100%] p-5">
+                  <label className="font-medium ">Bericht</label>
                   <textarea
                     type="password"
-                    class="block w-full px-4 py-4 mt-2 text-xl text-gray-700 placeholder-shown:text-base placeholder-gray-500 bg-gray-200 rounded-lg focus:outline-none focus:ring-4 focus:ring-blue-600 focus:ring-opacity-50 resize-none"
+                    className="block w-full px-4 py-4 mt-2 text-xl text-gray-700 placeholder-shown:text-base placeholder-gray-500 bg-gray-200 rounded-lg focus:outline-none focus:ring-4 focus:ring-blue-600 focus:ring-opacity-50 resize-none"
                     data-primary="blue-600"
                     data-rounded="rounded-lg"
                     placeholder="Uw bericht"
                   />
                 </div>
-                <div class=" p-5">
+                <div className=" p-5">
                   <a
                     href="#_"
-                    class="inline-block w-full px-5 py-4 mt-3 text-lg font-bold text-center transition duration-20 border-2 text-blue-500 ease-in duration-300  border-blue-500   rounded-lg hover:text-white hover:bg-blue-500 ease"
+                    className="inline-block w-full px-5 py-4 mt-3 text-lg font-bold text-center transition duration-20 border-2 text-blue-500 ease-in duration-300  border-blue-500   rounded-lg hover:text-white hover:bg-blue-500 ease"
                     data-rounded="rounded-lg"
                   >
                     Verstuur u formulier

@@ -21,8 +21,8 @@ COPY . /usr/src/app
 EXPOSE 3000
 
 # Running the app
-# CMD ["npm", "run", "start"]
-CMD ["npm", "run", "dev"]
+CMD ["npm", "run", "start"]
+# CMD ["npm", "run", "dev"]
 
 # ref: https://nextjs.org/docs/deployment
 # ref: https://steveholgado.com/nginx-for-nextjs/#dockerising-nextjs

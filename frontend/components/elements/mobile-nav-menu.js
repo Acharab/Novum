@@ -12,10 +12,10 @@ const MobileNavMenu = ({ navbar, closeSelf }) => {
   useLockBodyScroll()
 
   return (
-    <div className="w-screen h-screen fixed top-0 left-0 overflow-y-scroll bg-white z-50 pb-6">
+    <div className="w-screen h-[100%] fixed top-0 left-0 overflow-y-scroll bg-white z-50 pb-6">
       <div className="container h-full flex flex-col justify-between">
         {/* Top section */}
-        <div className="flex flex-row justify-between py-2 items-center">
+        <div className="flex flex-row justify-between py-2 items-center ">
           {/* Company logo */}
           <NextImage width="200" height="70" media={navbar.logoBlack} />
           {/* Close button */}

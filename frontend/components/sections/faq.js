@@ -28,7 +28,7 @@ export default function faq({ data }) {
                               </span>
                             ))}
                             {(faq.Answer == null && (
-                              <p className="md:px-6">Open het pfd-bestand <a target="_blank" className="text-blue-500 " href={faq.pdfurl}>hier</a>.</p>
+                              <p className="md:px-6">Open het pfd-bestand <a target="_blank"  rel="noreferrer" className="text-blue-500 " href={faq.pdfurl}>hier</a>.</p>
                             ))}
 
                         </div>

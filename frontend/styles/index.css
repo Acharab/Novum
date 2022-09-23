@@ -49,4 +49,19 @@
   }
 }
 
+@layer components{
+  @media only screen and (max-width: 768px) {
+    .herovisuals{
+      background-image: url("../public/image/bghero.png")!important;
+      background-color: black;
+      background-size: 400px 728px;
+      background-repeat: no-repeat;
+      background-position: left top;
+    }
+  }
+  .herovisuals{
+    background-color: black;
+  }
+}
+
 /* @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700); */
