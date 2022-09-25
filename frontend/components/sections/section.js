@@ -10,22 +10,6 @@ export default function section({ data }) {
   } else {
     imgpos = "right";
   }
-  //change id to make diensten from home rederict to section
-  const idContainer =
-    data.Title === "Omzet belasting"
-      ? "omzetbelasting"
-      : data.Title === "Algemeen advies"
-      ? "algemeenadvies"
-      : data.Title === "Jaarrekeningen"
-      ? "jaarrekeningen"
-      : data.Title === "Salarisadministratie"
-      ? "salarisadministratie"
-      : data.Title === "Rapportages"
-      ? "rapportages"
-      : data.Title === "Inkomsten belasting"
-      ? "inkomstenbelasting"
-      : "";
-  //Make lastword blue
 
   
 
@@ -33,7 +17,7 @@ export default function section({ data }) {
   return (
     <div
       className={`flex items-center justify-center bg-${data.Background}`}
-      id={idContainer}
+      id={data.idlink}
     >
       <div className="container">
       <div className="flex flex-wrap  py-10 lg:gap-10 lg:flex-nowrap container p-6 mx-auto xl:px-0">

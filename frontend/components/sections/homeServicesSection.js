@@ -5,10 +5,10 @@ import NextImage from "../elements/image";
 
 function homeServicesSection({ data }) {
   return (
-    <div className="bg-white justify-center items-center mt-10 md:mt-24 grid">
-      <section className="container justify-center items-center">
-        <div className="mx-auto  lg:px-2 justify-center items-center container  ">
-          <div className="flex max-w-[1140px]  flex-col mt-2 items-center justify-center text-center">
+    <div className="bg-white justify-center items-center mt-10 md:mt-24 ">
+      <section className="">
+        <div className="mx-auto  lg:px-2 justify-center items-center container ">
+          <div className="flex  container flex-col mt-2 items-center justify-center text-center">
             <h2 data-text="diensten" className=" lastword max-w-2xl tracking-wide mt-2 text-5xl font-bold leading-snug  text-gray-800 lg:leading-tight lg:text-5xl">
               {data.Title}
             </h2>

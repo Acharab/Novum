@@ -114,7 +114,7 @@ function Contact({ data }) {
         
       </div>
     </form> */}
-      <section className="w-full bg-black tails-selected-element">
+      <section className="w-full bg-black tails-selected-element pb-8">
         <div className="mx-auto max-w-7xl">
           <div className="flex flex-col lg:flex-row">
             <div className="relative w-full bg-cover lg:w-6/12 xl:w-7/12 ">
@@ -141,8 +141,8 @@ function Contact({ data }) {
                   </p>
                 </div>
                 <div className="relative w-full grid grid-cols-1 md:grid-cols-2 ">
-                  <div className="relative p-5">
-                    <label className="font-medium ">Naam</label>
+                  <div className="relative p-3">
+                    
                     <input
                       type="text"
                       className="block w-full px-4 py-4 mt-2 text-xl text-gray-700 placeholder-gray-500 placeholder-shown:text-base bg-gray-200 rounded-lg focus:outline-none focus:ring-4 focus:ring-blue-600 focus:ring-opacity-50"
@@ -151,8 +151,7 @@ function Contact({ data }) {
                       placeholder="Uw Naam"
                     />
                   </div>
-                  <div className="relative p-5">
-                    <label className="font-medium ">E-mail</label>
+                  <div className="relative p-3">
                     <input
                       type="text"
                       className="block w-full px-4 py-4 mt-2 text-xl text-gray-700 placeholder-gray-500 placeholder-shown:text-base bg-gray-200 rounded-lg focus:outline-none focus:ring-4 focus:ring-blue-600 focus:ring-opacity-50"
@@ -161,8 +160,7 @@ function Contact({ data }) {
                       placeholder="Uw E-mail"
                     />
                   </div>
-                  <div className="relative p-5">
-                    <label className="font-medium ">Bedrijf</label>
+                  <div className="relative p-3">
                     <input
                       type="text"
                       className="block w-full px-4 py-4 mt-2 text-xl text-gray-700 placeholder-shown:text-base placeholder-gray-500 bg-gray-200 rounded-lg focus:outline-none focus:ring-4 focus:ring-blue-600 focus:ring-opacity-50"
@@ -171,8 +169,7 @@ function Contact({ data }) {
                       placeholder="Uw Bedrijfsnaam"
                     />
                   </div>
-                  <div className="relative p-5">
-                    <label className="font-medium ">Dienst</label>
+                  <div className="relative p-3">
                     <input
                       type="search"
                       list="mylist"
@@ -194,8 +191,7 @@ function Contact({ data }) {
                   </div>
                 </div>
 
-                <div className="w-[100%] p-5">
-                  <label className="font-medium ">Bericht</label>
+                <div className="w-[100%] p-3">
                   <textarea
                     type="password"
                     className="block w-full px-4 py-4 mt-2 text-xl text-gray-700 placeholder-shown:text-base placeholder-gray-500 bg-gray-200 rounded-lg focus:outline-none focus:ring-4 focus:ring-blue-600 focus:ring-opacity-50 resize-none"

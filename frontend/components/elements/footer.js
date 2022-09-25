@@ -41,7 +41,7 @@ const Footer = ({ footer }) => {
                 {footerColumn.links.map((link) => (
                   <li
                     key={link.id}
-                    className="text-gray-300 py-1 px-1 -mx-1 hover:text-white"
+                    className="text-gray-300 py-1 px-1 flex -mx-1 hover:text-white"
                   >
                     {link.icons == "Phone" && (
                       <FontAwesomeIcon
@@ -87,9 +87,9 @@ const Footer = ({ footer }) => {
                     )}
                     {link.icons !== null && ""}
                     <CustomLink taget="_blank" link={link}>
-                      {link.text}
-                      <br></br>
-                      <div className="ml-5">{link.secondtext}</div>
+                      <div className="max-w-[100%] md:text-base text-xs">{link.text}</div>
+                      
+                      <div className="max-w-[100%] md:text-base text-xs ">{link.secondtext}</div>
                     </CustomLink>
                   </li>
                 ))}
@@ -113,7 +113,7 @@ const Footer = ({ footer }) => {
       </div>
       <div className="text-sm text-gray-300 mb-6 ">
         <div className="container flex">
-          <div>{footer.smallText}</div>
+          <div className=" md:max-w-[100%] max-w-[50%]">{footer.smallText}</div>
           <div className="text-white fill-white">
             <FontAwesomeIcon
               className="px-3 text-orange-500 fill-orange-500"

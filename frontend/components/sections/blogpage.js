@@ -44,7 +44,7 @@ function blogpage({ global, data }) {
           <div key={id} className="flex flex-col items-start col-span-12 space-y-3 sm:col-span-6  xl:col-span-4 border p-6 rounded-lg border-indigo-500">
             <Link href={blog.Slug} className="block cursor-pointer">
               <NextImage
-                className="object-fill rounded-md cursor-pointer"
+                className="rounded-md object-contain cursor-pointer"
                 media={blog.BlogImage}
                 width={500}
                 height={350}

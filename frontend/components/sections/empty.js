@@ -6,8 +6,8 @@ import { element } from "prop-types";
 function empty({ global, data }) {
   global = global.attributes.Blogs[data.title];
   return (
-    <div className="flex h-auto">
-      <div className="flex content-center max-h-[100%] w-1/3">
+    <div className="flex justify-between md:flex-wrap flex-wrap-reverse  h-auto">
+      <div className="flex content-center max-h-[100%] md:w-2/4 grid-cols-1">
         <div className="py-7 flex justify-center">
           <div className="flex pl-5 flex-col justify-center content-center">
             <h1 className="md:text-2xl text-xl font-bold pt-8 text-gray-800 p-3">
@@ -34,7 +34,7 @@ function empty({ global, data }) {
           </div>
         </div>
       </div>
-      <div className="w-2/3">
+      <div className="md:w-2/4 flex justify-end">
         <NextImage
           media={global.BlogImage}
           className="flex object-cover aspect-square"

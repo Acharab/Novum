@@ -54,9 +54,9 @@
     .herovisuals{
       background-image: url("../public/image/bghero.png")!important;
       background-color: black;
-      background-size: 400px 728px;
+      background-size: 400px 780px;
       background-repeat: no-repeat;
-      background-position: left top;
+      background-position: right top;
     }
   }
   .herovisuals{

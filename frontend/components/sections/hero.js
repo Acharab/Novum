@@ -17,7 +17,7 @@ export default function Hero({ data }) {
   }
   
   return (
-    <div className={`md:bg-${color} herovisuals text-${text} md:py-16 lg:py-0 xl:py-0 py-48 z-10 w-screen relative`}>
+    <div className={`md:bg-${color} herovisuals text-${text} md:py-16 lg:py-0 xl:py-0 py-56 z-10 w-screen relative`}>
     <section
       className={`container `}
     >
@@ -29,7 +29,7 @@ export default function Hero({ data }) {
           <div className="grid place-content-center max-w-[100%]">
             <h1
               data-text={data.lastword}
-              className="lastwordsecendary text-4xl font-bold h-fit md:pr-8 md:text-5xl max-w-[100%]  leading-snug    lg:text-7xl lg:leading-tight  xl:leading-tight tracking-wide "
+              className="lastword text-4xl font-bold h-fit md:pr-8 md:text-5xl max-w-[100%]  leading-snug    lg:text-7xl lg:leading-tight  xl:leading-tight tracking-wide "
             >
               {data.Title}{data.lastword}
             </h1>
@@ -48,7 +48,7 @@ export default function Hero({ data }) {
                   <a
                     target="_blank"
                     rel="noopener"
-                    className="px-8 py-4 sm:items-center  text-base font-medium text-center ease-in duration-300 hover:bg-orange-500 hover:text-white   text-orange-500 border-2 border-orange-500 rounded"
+                    className="px-8 py-4 sm:items-center  text-base font-medium text-center ease-in duration-300 hover:bg-orange-500 hover:text-white   text-blue-500 border-2 border-blue-500 rounded"
                   >
                     <span className="pr-2">{data.Buttons.text}</span>
                   </a>

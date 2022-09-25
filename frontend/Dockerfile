@@ -11,13 +11,13 @@ WORKDIR /usr/src/app
 COPY package.json /usr/src/app/
 # COPY yarn.lock /usr/src/app/
 COPY .next /usr/src/app/
-RUN npm install
+RUN npm install -f
 
 # Copying source files
 COPY . /usr/src/app
 
 # Building app
-# RUN npm run build
+RUN npm run build
 EXPOSE 3000
 
 # Running the app

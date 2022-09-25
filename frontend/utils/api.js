@@ -232,6 +232,7 @@ export async function getPageData({ slug, locale, preview }) {
                   ... on ComponentSectionsSection{
                     lastword
                     id
+                    idlink
                     Title
                     Description
                     Background
