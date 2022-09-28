@@ -19,7 +19,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 const Footer = ({ footer }) => {
-  // console.log(footer);
+  
   return (
     <footer className="pt-12 bg-black">
       <div className="container flex flex-col lg:flex-row lg:justify-between">
@@ -87,9 +87,8 @@ const Footer = ({ footer }) => {
                     )}
                     {link.icons !== null && ""}
                     <CustomLink taget="_blank" link={link}>
-                      <div className="max-w-[100%] md:text-base text-xs">{link.text}</div>
-                      
-                      <div className="max-w-[100%] md:text-base text-xs ">{link.secondtext}</div>
+                      <div className="max-w-[100%] md:text-base text-xs text-center">{link.text}</div>
+                      <div className="max-w-[100%] md:text-base text-xs text-center">{link.secondtext}</div>
                     </CustomLink>
                   </li>
                 ))}
@@ -111,7 +110,7 @@ const Footer = ({ footer }) => {
           ))}
         </nav>
       </div>
-      <div className="text-sm text-gray-300 mb-6 ">
+      <div className="text-sm md:text-base text-gray-300 mb-6 ">
         <div className="container flex">
           <div className=" md:max-w-[100%] max-w-[50%]">{footer.smallText}</div>
           <div className="text-white fill-white">

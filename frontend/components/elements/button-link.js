@@ -23,7 +23,7 @@ const ButtonContent = ({ button, appearance, compact }) => {
         },
         // Specific to when the button is dark outlines
         {
-          "text-primary-600 border-primary-600": appearance === "dark-outline",
+          "text-blue-500 border-blue-500 hover:bg-blue-500 ease-in duration-300 hover:text-white": appearance === "dark-outline",
         },
         // Specific to when the button is fully white
         {

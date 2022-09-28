@@ -2,8 +2,7 @@ import React from "react";
 import { MdEmail } from "react-icons/md";
 import { FaLinkedinIn } from "react-icons/fa";
 import NextImage from "../elements/image";
-function team({data}) {
-    
+function team({ data }) {
   return (
     <div className="bg-white justify-center items-center  py-0">
       <div className="flex max-w-[1140px]  flex-col mt-2  items-center justify-center text-center">
@@ -13,7 +12,10 @@ function team({data}) {
         <div className="grid md:grid-cols-3 gap-[25px] container p-8 mx-auto xl:px-0">
           {data.Teamcards.map((teamCard, id) => {
             return (
-              <div className="flex flex-col justify-center border-2 border-blue-500 rounded-xl" key={id}>
+              <div
+                className="flex flex-col justify-center border-2 border-blue-500 rounded-xl"
+                key={id}
+              >
                 {" "}
                 <div className="flex justify-center ">
                   {/* <div className="absolute visible md:visible lg:visible lg:inset-0 md:inset-3 md:-left-1 md:-bottom-7 w-56  md:mt-10  md:border-2 lg:-left-1  lg:-bottom-3 lg:mr-10 lg:mt-10 rounded-xl lg:border-2 border-red-500 bg-orange-400/20"></div>
@@ -37,11 +39,17 @@ function team({data}) {
                     <h3>{teamCard.Position}</h3>
                   </div>
                   <div className="flex justify-center py-2">
-                    <a className="m-2" href={teamCard.buttons.url}>
+                    <a
+                      className="m-2 cursor-pointer"
+                      href={teamCard.buttons.url}
+                    >
                       <MdEmail className="w-10 h-10 text-blue-500" />
                     </a>
 
-                    <a className="m-2" href={teamCard.buttons.url}>
+                    <a
+                      className="m-2 cursor-pointer"
+                      href={teamCard.buttons.url}
+                    >
                       <FaLinkedinIn className="w-9 h-9 text-blue-500" />
                     </a>
                   </div>
