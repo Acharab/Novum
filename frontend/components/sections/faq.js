@@ -1,11 +1,20 @@
 import React, { useEffect } from "react";
 
 
-export default function faq({ data }) {
+export default function Faq({ data }) {
   //close every faq detail after a new one is opened
-  
-  
-
+  useEffect(() => {
+    const faqDetails = document.querySelectorAll("details");
+    faqDetails.forEach((faqDetail) => {
+      faqDetail.addEventListener("click", () => {
+        faqDetails.forEach((faqDetail) => {
+          if (faqDetail.open) {
+            faqDetail.open = false;
+          }
+        });
+      });
+    });
+  }, []);
   return (
     <section className="bg-gray-200  grid justify-center">
       <div className="flex flex-wrap justify-center   lg:gap-10 lg:flex-nowrap h-fit container p-8 mx-auto xl:px-0">

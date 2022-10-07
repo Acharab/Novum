@@ -55,6 +55,8 @@ const Navbar = ({ navbar, pageContext, navicons }) => {
       ? "white"
       : router.asPath === "/blogitemfourth"
       ? "white"
+      : router.asPath === "/bedankt"
+      ? "black"
       : "";
   let text;
   //choose black and white logo

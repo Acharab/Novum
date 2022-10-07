@@ -242,6 +242,9 @@ export async function getPageData({ slug, locale, preview }) {
                   }
                   ... on ComponentSectionsThankyou{
                     title
+                    image{
+                      ...FileParts
+                    }
                     links{
                       url
                       newTab
