@@ -31,7 +31,7 @@ function Contact({ data }) {
       });
   };
   return (
-    <div className="container my-auto h-max">
+    <div className="container md:py-48 h-max py-10">
       <section className="py-6 dark:bg-gray-800 dark:text-gray-50">
         <div className="grid  grid-cols-1 px-6   md:grid-cols-3">
           <div className="py-6 md:py-0 px-6">

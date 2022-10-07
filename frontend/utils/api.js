@@ -128,7 +128,7 @@ export async function getPageData({ slug, locale, preview }) {
                   ... on ComponentSectionsHomeblog{
                     id
                     title
-                    description
+                    lastword
                   }
                   
                   
@@ -166,7 +166,7 @@ export async function getPageData({ slug, locale, preview }) {
                   ... on ComponentSectionsRevieuw{
                     id
                     Title
-                    description
+                    lastword
                     cards{
                       id
                       Image {

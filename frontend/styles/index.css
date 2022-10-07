@@ -63,6 +63,18 @@
     transform: translateX(-100%);
     position: absolute;
   }
+  .lastwordwhite::after {
+    color: #fff !important;
+    content: attr(data-text);
+    transform: translateX(-100%);
+    position: absolute;
+  }
+  .lastwordblack::after {
+    color: #000 !important;
+    content: attr(data-text);
+    transform: translateX(-100%);
+    position: absolute;
+  }
 }
 
 @layer components{
