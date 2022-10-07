@@ -128,11 +128,13 @@ export async function getPageData({ slug, locale, preview }) {
                   ... on ComponentSectionsHomeblog{
                     id
                     title
+                    description
                   }
                   
                   
                   ... on ComponentSectionsTeams{
                     Teamcards{
+                      Name
                       Image{
                         ...FileParts
                       }
@@ -158,11 +160,13 @@ export async function getPageData({ slug, locale, preview }) {
                       }
                     }
                   }
-                  ... on ComponentSectionsEmpty{
-                    title
+                  ... on ComponentSectionsEachblog{
+                    blogNumber
                   }
                   ... on ComponentSectionsRevieuw{
                     id
+                    Title
+                    description
                     cards{
                       id
                       Image {
@@ -176,7 +180,15 @@ export async function getPageData({ slug, locale, preview }) {
                   ... on ComponentSectionsContact{
                     id
                     title
-                    description
+                    subtitle
+                    icons{
+                      id
+                      iconText
+                      icon{
+                        ...FileParts
+                      }
+                      link
+                    }
                   }
                   ... on ComponentSectionsAboutus {
                     id
@@ -228,7 +240,15 @@ export async function getPageData({ slug, locale, preview }) {
                       }
                     }
                   }
-                  
+                  ... on ComponentSectionsThankyou{
+                    title
+                    links{
+                      url
+                      newTab
+                      text
+                      type
+                    }
+                  }
                   ... on ComponentSectionsSection{
                     lastword
                     id
@@ -352,7 +372,14 @@ export async function getGlobalData(locale) {
                   Description
                   Category
                   }
-                
+                navicons{
+                  id
+                  icon{
+                    ...FileParts
+                  }
+                  link
+                  iconText
+                }
                 footer {
                   logo {
                     ...FileParts

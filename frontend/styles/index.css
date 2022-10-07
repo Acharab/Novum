@@ -24,7 +24,23 @@
     font-weight: 500;
   }
 }
+@layer components{
+  .aboutus-icons{
+    @apply w-6 h-6 fill-current text-orange-500;
+  }
 
+  /* .blogImages div  div div span span img {
+    object-fit: cover;
+    object-position: top;
+    border-radius: 1em;
+  } */
+
+  .blogImages div  div div span img {
+    object-fit: cover;
+    object-position: top;
+    border-radius: 1em;
+  }
+}
 @layer components {
   .lastword::after {
     content: attr(data-text);
@@ -63,5 +79,6 @@
     background-color: black;
   }
 }
+
 
 /* @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700); */

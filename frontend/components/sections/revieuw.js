@@ -7,12 +7,19 @@ import { faGoogle } from "@fortawesome/free-brands-svg-icons";
 function revieuw({data}) {
   return (
     <div className="bg-gray-100">
+      <div className="flex  container flex-col mt-2 items-center justify-center text-center">
+        <h2 className=" max-w-2xl tracking-wide mt-2 text-5xl font-bold leading-snug  text-blue-500 lg:leading-tight lg:text-5xl">
+          {data.Title}
+        </h2>
+        <p className="max-w-4xl py-8 text-lg leading-normal text-blue-400 lg:text-xl xl:text-xl ">
+          {data.description}
+        </p>
+      </div>
       <div className=" justify-center items-center">
         <div className="flex flex-wrap  py-20 lg:gap-10 lg:flex-nowrap h-fit container p-8 mx-auto xl:px-0">
           <div className="grid md:grid-cols-3 md:grid-rows-1 gap-x-[14px] gap-y-[14px] grid-cols-1 grid-rows-3">
-            {data.cards.map((card) => (
-                // console.log(card.Name);
-                <div key={card.id} className="bg-blue-500/90 rounded-md text-white p-5">
+            {data.cards.map((card , id) => (
+                <div key={id} className="bg-blue-500/90 rounded-md text-white p-5">
                   <div className="grid justify-center border-full pb-4">
                     <FontAwesomeIcon className="text-[11rem]" icon={faGoogle}/>
                   </div>

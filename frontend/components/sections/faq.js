@@ -1,6 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
+
 
 export default function faq({ data }) {
+  //close every faq detail after a new one is opened
+  
+  
+
   return (
     <section className="bg-gray-200  grid justify-center">
       <div className="flex flex-wrap justify-center   lg:gap-10 lg:flex-nowrap h-fit container p-8 mx-auto xl:px-0">
@@ -8,7 +13,10 @@ export default function faq({ data }) {
           <div className="text-grey-700">
             <div className=" grid   py-20 md:py-10 mx-auto ">
               <div className="text-center  mb-12 grid grid-cols-2 py-12">
-                <h1 data-text="vragen" className="lastword lg:text-6xl whitespace-nowrap md:text-5xl content[attr(data-text)] px-3  text-3xl lg:font-semibold lg:text-start lg:title-font text-gray-900 mb-3">
+                <h1
+                  data-text="vragen"
+                  className="lastword lg:text-6xl whitespace-nowrap md:text-5xl content[attr(data-text)] px-3  text-3xl lg:font-semibold lg:text-start lg:title-font text-gray-900 mb-3"
+                >
                   Veel Gestelde vragen
                 </h1>
               </div>
@@ -22,14 +30,25 @@ export default function faq({ data }) {
                         </summary>
                         <div className="p-6 md:bg-white bg-transparent">
                           {/* Only use a Answer or pfdurl not both */}
-                            {(faq.Answer != null && (
-                              <span className="font-semibold text-gray-500 text-base text-justify md:px-6">
-                                {faq.Answer}
-                              </span>
-                            ))}
-                            {(faq.Answer == null && (
-                              <p className="md:px-6">Open het pfd-bestand <a target="_blank"  rel="noreferrer" className="text-blue-500 " href={faq.pdfurl}>hier</a>.</p>
-                            ))}
+                          {faq.Answer != null && (
+                            <span className="font-semibold text-gray-500 text-base text-justify md:px-6">
+                              {faq.Answer}
+                            </span>
+                          )}
+                          {faq.Answer == null && (
+                            <p className="md:px-6">
+                              Open het pfd-bestand{" "}
+                              <a
+                                target="_blank"
+                                rel="noreferrer"
+                                className="text-blue-500 "
+                                href={faq.pdfurl}
+                              >
+                                hier
+                              </a>
+                              .
+                            </p>
+                          )}
                         </div>
                       </details>
                     </div>

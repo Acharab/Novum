@@ -14,7 +14,7 @@ import CustomLink from "./custom-link";
 import { LinkedIn } from "@mui/icons-material";
 import Link from "next/link";
 
-const MobileNavMenu = ({ navbar, closeSelf }) => {
+const MobileNavMenu = ({ navbar, closeSelf, navicons }) => {
   useLockBodyScroll();
 
   return (
@@ -32,8 +32,8 @@ const MobileNavMenu = ({ navbar, closeSelf }) => {
         {/* Bottom section */}
         <div className="flex flex-col justify-start w-11/12 mx-auto mt-6">
           <ul className="flex flex-col list-none gap-5 items-baseline text-xl ">
-            {navbar.links.map((navLink) => (
-              <li key={navLink.id} className="block w-full">
+            {navbar.links.map((navLink, id) => (
+              <li key={id} className="block w-full">
                 <CustomLink link={navLink}>
                   <button onClick={closeSelf} className="hover:text-gray-900  flex flex-row justify-start text-3xl items-center">
                     <span className="text-orange-500 tracking-tighter font-bold">{navLink.text}</span>
@@ -50,23 +50,13 @@ const MobileNavMenu = ({ navbar, closeSelf }) => {
         </div>
         <div className="w-11/12 mx-auto ">
           <p className="text-3xl font-bold text-blue-500">Contact opnemen</p>
-          <ul className="socials flex gap-x-3 ">  
-            <li className="inline">
-              <a href="tel:3250895376">
-                <LinkedIn className="text-white hover:text-blue-500 w-20 scale-150 h-20 gap-3" />
+          <ul >  
+          {navicons.map((icon) => (
+              <a key={icon.id} href={icon.link} className="flex gap-x-3 items-center">
+                <NextImage media={icon.icon} width={20} height={20}/>
+                <span className="text-white">{icon.iconText}</span>
               </a>
-            </li>
-            <li className="inline">
-              <a href="mailto:info@nextchapter.agency">
-                <LinkedIn className="text-white hover:text-blue-500 w-20 scale-150 h-20  gap-3" />
-              </a>
-            </li>
-
-            <li className="inline">
-              <a href="https://nl.linkedin.com/company/next-chapter-agency?trk=ppro_cprof">
-                <LinkedIn className="text-white hover:text-blue-500 w-20 scale-150 h-20  gap-3" />
-              </a>
-            </li>
+              ))}
           </ul>
         </div>
       </div>

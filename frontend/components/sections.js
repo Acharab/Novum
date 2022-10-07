@@ -12,8 +12,8 @@ import aboutus from "./sections/aboutus"
 import blogpage from "./sections/blogpage"
 import Files from "./sections/Files"
 import Homeblog from "./sections/homeBlog"
-import empty from "./sections/empty"
-
+import eachblog from "./sections/eachblog"
+import thankyou from "./sections/thankyou"
 // Map Strapi sections to section components
 const sectionComponents = {
   ComponentSectionsHero: Hero,
@@ -29,8 +29,8 @@ const sectionComponents = {
   ComponentSectionsBlogpage: blogpage,
   ComponentSectionsFiles: Files,
   ComponentSectionsHomeblog: Homeblog,
-  ComponentSectionsEmpty: empty,
-  
+  ComponentSectionsEachblog: eachblog,
+  ComponentSectionsThankyou: thankyou,
 }
 
 // Display a section individually
@@ -70,7 +70,6 @@ const PreviewModeBanner = () => {
 
 // Display the list of sections
 const Sections = ({ sections, preview, global }) => {
-  
   return (
     <div className="flex flex-col">
       {/* Show a banner if preview mode is on */}

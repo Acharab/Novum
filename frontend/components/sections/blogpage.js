@@ -35,9 +35,9 @@ function blogpage({ global, data }) {
     //     </div>
     //   ))}
     // </div>
-
-    <div className="w-full px-5 py-6 mx-auto space-y-5 sm:py-8 md:py-12 sm:space-y-8 md:space-y-16 max-w-7xl tails-selected-element">
-      <div className="flex grid grid-cols-12 pb-10 sm:px-5 gap-x-8 gap-y-16">
+    <div className="flex justify-center ">
+    <div className="w-full  py-6 mx-auto space-y-5 sm:py-8 md:py-12 sm:space-y-8 md:space-y-16  container">
+      <div className="flex grid grid-cols-12 pb-10 gap-x-6 gap-y-16">
         {Blogs.map((blog, id) => (
           <div
             key={id}
@@ -45,7 +45,7 @@ function blogpage({ global, data }) {
           >
             <Link href={blog.Slug} className="block cursor-pointer">
               <NextImage
-                className="rounded-md object-contain cursor-pointer"
+                className="rounded-md object-cover cursor-pointer"
                 media={blog.BlogImage}
                 width={500}
                 height={350}
@@ -63,6 +63,7 @@ function blogpage({ global, data }) {
           </div>
         ))}
       </div>
+    </div>
     </div>
   );
 }

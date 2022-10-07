@@ -1,5 +1,7 @@
 import Link from "next/link";
 import React from "react";
+import { getButtonAppearance } from "utils/button";
+import ButtonLink from "../elements/button-link";
 import CustomLink from "../elements/custom-link";
 import NextImage from "../elements/image";
 
@@ -21,19 +23,21 @@ function homeServicesSection({ data }) {
           </div>
 
           <div className="space-y-8 md:grid   sm:grid-cols-2 lg:grid-cols-3 md:gap-6 md:space-y-0">
-            {data.Cards.map((card) => (
+            {data.Cards.map((card, id) => (
               <div
-                className="px-8 md:pb-3  pb-5 md:p-12 hover:shadow-lg ease-in duration-500 hover:shadow-slate-400 py-1  hover:border-slate-300"
-                key={card.id}
+                className="px-8 md:pb-3  w-full pb-5 md:p-12 hover:shadow-lg ease-in duration-500 hover:shadow-slate-400 py-1  hover:border-slate-300"
+                key={id}
               >
+                <div className="mb-3">
                 <NextImage
-                  className="z-10 pb-5"
+                  className="z-10"
                   media={card.Image}
                   width="70"
                   height="70"
                   alt="Hero jpeg"
                 />
-                <h3 className="py-2 whitespace-nowrap text-3xl font-bold ">
+                </div>
+                <h3 className="py-3 text-3xl font-bold max-w-[100%]">
                   {card.Title}
                 </h3>
                 <div>
@@ -41,23 +45,23 @@ function homeServicesSection({ data }) {
                     {card.Description}
                   </p>
                   <div className="md:py-7 py-3">
-                    <CustomLink className="w-max" link={card.Buttons}>
-                      <button className="font-bold text-xl text-blue-500 w-[9rem] p-2 text-center border-2 border-blue-500 ease-in duration-300 hover:text-white hover:bg-blue-500 rounded">
-                        {card.Buttons.text}
-                      </button>
-                    </CustomLink>
+                      <ButtonLink
+                        button={card.Buttons}
+                        appearance={getButtonAppearance("blue", "blue")}
+                        compact
+                      />
                   </div>
                 </div>
               </div>
             ))}
           </div>
           <Link href="/diensten">
-            <div className="flex-auto  flex justify-center items-center mr-[12%] lg:items-center mb-32 pt-20 sm:flex">
+            <div className="flex-auto  flex justify-center items-center  lg:items-center mb-32 pt-20 sm:flex">
               <a
                 href=""
                 target="_blank"
                 rel="noopener"
-                className="w-100 p-10 py-4 sm:items-center items-stretch text-xl font-medium text-center ease-in duration-300 hover:bg-orange-500 hover:text-white text-orange-500 border-2 border-orange-500 rounded  "
+                className="w-[48%] uppercase py-2 px-2 sm:items-center items-stretch text-lg font-medium text-center ease-in duration-300 hover:bg-orange-500 hover:text-white text-orange-500 border border-orange-500 rounded  "
               >
                 <span className="">Diensten</span>
               </a>

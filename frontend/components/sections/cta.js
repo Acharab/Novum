@@ -10,7 +10,7 @@ export default function Cta({ data }) {
     <div className="flex flex-wrap justify-center   lg:gap-10 lg:flex-nowrap h-fit container p-8 mx-auto xl:px-0">
       <div className=" md:flex md:justify-evenly grid grid-cols-1 w-screen py-4">
         <div className="align-center md:w-1/3 h-full md:justify-start justify-center grid my-auto">
-          <h2 className="flex-innitial h-full place-items-center grid px-3 text-3xl font-bold w-fit lg:text-4xl text-center md:mb-0 mb-6  text-white">
+          <h2 className="flex-innitial uppercase h-full place-items-center grid px-3 text-3xl font-bold w-fit lg:text-[2rem] text-center md:mb-0 mb-6  text-white">
             {data.Title}
           </h2>
         </div>
@@ -36,8 +36,8 @@ export default function Cta({ data }) {
             link={data.Buttons}
             key={data.Buttons.id}
           >
-            <div className="md:mt-[1rem] md:py-0 py-2">
-              <button className="inline-block md:pl-5 md:ml-2 md:item-center  md:text-center mx-auto text-xl sm:text-2xl pl-0 ml-0  lg:text-center text-white font-bold  border-2 hover:rounded-md ease-in duration-300 sm:px-7  py-4 sm:text-center ">
+            <div className="md:mt-[1rem] md:py-0 py-2 ">
+              <button className="inline-block md:pl-5 px-3  uppercase md:ml-2 md:item-center md:text-center mx-auto text-xl sm:text-2xl  ml-0 lg:text-center text-white hover:text-blue-500 hover:bg-white font-bold  border-2 rounded-md ease-in duration-300 sm:px-7  py-4 sm:text-center ">
                 {data.Buttons.text}
               </button>
             </div>

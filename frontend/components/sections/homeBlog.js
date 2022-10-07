@@ -27,7 +27,7 @@ function Homeblog({ data, global }) {
   const slides = [];
   blogs.map((image, id) => {
     slides.push(
-      <SwiperSlide className="w-96" key={{ id }}>
+      <SwiperSlide className="w-96" key={id}>
         <div className="h-fit flex justify-center cursor-pointer">
           <Link href={image.Slug} className="cursor-pointer">
             <NextImage
@@ -44,11 +44,19 @@ function Homeblog({ data, global }) {
 
   return (
     <section className="bg-blue-500 justify-center items-center">
+      <div className="flex  container flex-col mt-2 items-center justify-center text-center">
+        <h2 className=" max-w-2xl tracking-wide mt-2 text-5xl font-bold leading-snug  text-white lg:leading-tight lg:text-5xl">
+          {data.title}
+        </h2>
+        <p className="max-w-4xl py-8 text-lg leading-normal text-gray-200 lg:text-xl xl:text-xl ">
+          {data.description}
+        </p>
+      </div>
       <div className="grid grid-cols-1 md:flex md:flex-wrap   py-20 lg:gap-10 lg:flex-nowrap h-fit container p-8 mx-auto xl:px-0">
         <div className="md:w-3/6   grid  ">
           <Swiper
             id="Courasel"
-            className="w-full object-cover"
+            className="w-full object-cover blogImages"
             modules={[
               Autoplay,
               Pagination,
@@ -67,7 +75,7 @@ function Homeblog({ data, global }) {
         </div>
         <div className=" md:w-3/6 flex my-10 m-auto justify-center content-center">
           <div className="h-auto m-auto">
-            <div className="  grid   justify-center">
+            <div className="grid justify-center">
               {blogs.map((blog, id) => (
                 <div className=" " key={id}>
                   <Link href={`/${blog.Slug}`}>

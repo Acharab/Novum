@@ -2,6 +2,7 @@ import NextImage from "../elements/image";
 import ButtonLink from "../elements/button-link";
 import CustomLink from "../elements/custom-link";
 import Link from "next/link";
+import { getButtonAppearance } from "utils/button";
 
 export default function section({ data }) {
   let imgpos;
@@ -11,13 +12,18 @@ export default function section({ data }) {
     imgpos = "right";
   }
 
+
   
 
 
   return (
+    
     <div
       className={`flex items-center justify-center bg-${data.Background}`}
-      id={data.idlink}
+      id={data.idlink != null &&
+        data.idlink
+      }
+      
     >
       <div className="container">
       <div className="flex flex-wrap  py-10 lg:gap-10 lg:flex-nowrap container p-6 mx-auto xl:px-0">
@@ -39,11 +45,13 @@ export default function section({ data }) {
                 {data.Description}
               </p>
               {data.Buttons != undefined && (
-                <Link href={data.Buttons.url}>
-                  <a className="font-bold text-xl text-blue-500 w-[9rem] p-2 text-center border-2 border-blue-500 ease-in duration-300 hover:text-white hover:bg-blue-500 rounded">
-                    Lees Meer
-                  </a>
-                </Link>
+                <div className="md:w-[50%] lg:w-[30%] w-[40%]">
+                <ButtonLink
+                button={data.Buttons}
+                appearance={getButtonAppearance("blue", "blue")}
+                compact
+                />
+                </div>
               )}
             </div>
           </div>
@@ -57,12 +65,12 @@ export default function section({ data }) {
           <div className="">
             <div className=" px-6 pt-8 w-full">
               <div className="relative ">
-                <div className="absolute inset-0 -left-7 -bottom-7 mr-10 mt-10 rounded-3xl border-2 border-red-500 bg-orange-400/20"></div>
-                <div className="absolute border-blue-visual inset-0 -right-3 mb-10 ml-10 -top-3 rounded-3xl border-2 border-blue-500"></div>
-                <div className="relative grid top-3 right-3  border-2 border-blue-500 rounded-3xl ">
+                <div className="absolute inset-0 -left-7 -bottom-7 hidden md:block mr-10 mt-10 rounded-3xl border-2 border-red-500 bg-orange-400/20"></div>
+                <div className="absolute border-blue-visual hidden md:block inset-0 -right-3 mb-10 ml-10 -top-3 rounded-3xl border-2 border-blue-500"></div>
+                <div className="relative  top-3 hidden md:grid right-3  border-2 border-blue-500 rounded-3xl ">
                   <NextImage
                     // add relative class to make the z-index work
-                    className="z-10 object-cover rounded-3xl"
+                    className="z-10 object-cover  rounded-3xl"
                     media={data.Image}
                     // better not using width and heigt directly on here
                     width="500"

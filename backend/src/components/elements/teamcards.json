@@ -2,19 +2,21 @@
   "collectionName": "components_elements_teamcards",
   "info": {
     "displayName": "Teamcards",
-    "icon": "donate"
+    "icon": "donate",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "Image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "Position": {
       "type": "string"
@@ -23,6 +25,9 @@
       "type": "component",
       "repeatable": true,
       "component": "links.button-link"
+    },
+    "Name": {
+      "type": "string"
     }
   }
 }

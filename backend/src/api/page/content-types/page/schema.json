@@ -53,7 +53,9 @@
         "sections.aboutus",
         "sections.blogpage",
         "sections.homeblog",
-        "sections.empty"
+        "sections.eachblog",
+        "elements.faq-toggles",
+        "sections.thankyou"
       ],
       "pluginOptions": {
         "i18n": {

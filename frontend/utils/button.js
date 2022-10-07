@@ -17,6 +17,30 @@ export function getButtonAppearance(type, background) {
     // White outline primary button on a dark background
     return 'white-outline'
   }
+  if (type === 'blue') {
+    if (background === 'blue') {
+      // Dark outline primary button on a light background
+      return 'blue'
+    }
+    // White outline primary button on a dark background
+    return 'blue'
+  }
+  if (type === 'orange') {
+    if (background === 'orange') {
+      // Dark outline primary button on a light background
+      return 'orange'
+    }
+    // White outline primary button on a dark background
+    return 'orange'
+  }
+  if (type === 'nav') {
+    if (background === 'nav') {
+      // Dark outline primary button on a light background
+      return 'nav'
+    }
+    // White outline primary button on a dark background
+    return 'orange'
+  }
 
   // Shouldn't happen, but default to dark button just in case
   return 'dark'

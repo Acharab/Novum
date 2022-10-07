@@ -29,12 +29,12 @@ const Footer = ({ footer }) => {
           )}
         </div>
         <nav className="flex flex-wrap flex-row lg:gap-20 items-start lg:justify-end mb-10">
-          {footer.columns.map((footerColumn) => (
+          {footer.columns.map((footerColumn, id) => (
             <div
-              key={footerColumn.id}
+              key={id}
               className="mt-10 lg:mt-0 w-6/12 lg:w-auto"
             >
-              <p className="uppercase tracking-wide font-semibold text-orange-500">
+              <p className="uppercase tracking-wide font-semibold text-blue-500">
                 {footerColumn.title}
               </p>
               <ul className="mt-2">
@@ -87,8 +87,8 @@ const Footer = ({ footer }) => {
                     )}
                     {link.icons !== null && ""}
                     <CustomLink taget="_blank" link={link}>
-                      <div className="max-w-[100%] md:text-base text-xs text-center">{link.text}</div>
-                      <div className="max-w-[100%] md:text-base text-xs text-center">{link.secondtext}</div>
+                      <div className="max-w-[100%] md:text-base text-xs ">{link.text}</div>
+                      <div className="max-w-[100%] md:text-base text-xs ">{link.secondtext}</div>
                     </CustomLink>
                   </li>
                 ))}

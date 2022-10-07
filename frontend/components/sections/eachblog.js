@@ -2,9 +2,8 @@ import React from "react";
 import NextImage from "../elements/image";
 import { faCircleChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { element } from "prop-types";
-function empty({ global, data }) {
-  global = global.attributes.Blogs[data.title];
+export default function eachblog({ global, data }) {
+  global = global.attributes.Blogs[data.blogNumber];
   return (
     <div className="flex justify-between container  md:flex-wrap flex-wrap-reverse  h-auto">
       <div className="flex content-center  max-h-[100%] md:w-2/4 grid-cols-1">
@@ -21,7 +20,7 @@ function empty({ global, data }) {
               onClick={function Scrolldown() {
                 // let textarea = document.getElementsByClassName("textarea");
                 // textarea.scrollTop = textarea.scrollHeight;
-                // console.log("clicked", textarea.scrollTop);
+                
                 let element = document.querySelector(".textarea");
                 element.scroll({
                   top: element.scrollHeight,
@@ -49,4 +48,3 @@ function empty({ global, data }) {
   );
 }
 
-export default empty;

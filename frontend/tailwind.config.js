@@ -2,7 +2,7 @@ const { colors } = require(`tailwindcss/defaultTheme`)
 
 module.exports = {
   mode: "jit", // see https://tailwindcss.com/docs/just-in-time-mode
-  purge: ["./components/**/*.js", "./pages/**/*.js"],
+  purge: ["./components/**/*.js", "./pages/**/*.js", "./lib/**/*.js"],
   darkMode: false, // or "media" or "class"
   theme: {
     extend: {

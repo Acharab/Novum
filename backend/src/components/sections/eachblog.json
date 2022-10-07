@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_sections_eachblogs",
+  "info": {
+    "displayName": "Eachblog",
+    "icon": "wifi"
+  },
+  "options": {},
+  "attributes": {
+    "blogNumber": {
+      "type": "integer"
+    }
+  }
+}

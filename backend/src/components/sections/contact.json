@@ -10,8 +10,14 @@
     "title": {
       "type": "string"
     },
-    "description": {
-      "type": "richtext"
+    "subtitle": {
+      "type": "string"
+    },
+    "icons": {
+      "displayName": "contacticons",
+      "type": "component",
+      "repeatable": true,
+      "component": "layout.contacticons"
     }
   }
 }

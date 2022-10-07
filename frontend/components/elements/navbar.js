@@ -20,7 +20,7 @@ import LocaleSwitch from "../locale-switch";
 // import whiteLogo from "../../public/newLogoWhite.png"
 // import blackLogo from "../../public/newLogoBlack.png"
 
-const Navbar = ({ navbar, pageContext }) => {
+const Navbar = ({ navbar, pageContext, navicons }) => {
   const router = useRouter();
   const [mobileMenuIsShown, setMobileMenuIsShown] = useState(false);
   const background =
@@ -75,8 +75,8 @@ const Navbar = ({ navbar, pageContext }) => {
     <>
       {" "}
       <div className={`bg-${background} text-${text}`}>
-      <nav className={`py-6 sm:py-2 container`}>
-        <div className=" flex flex-row items-center justify-between">
+      <nav className={`py-6 container`}>
+        <div className=" flex flex-row items-center justify-between gap-x-6">
           {/* Content aligned to the left */}
           <Link href="/">
             <a className="">
@@ -91,7 +91,7 @@ const Navbar = ({ navbar, pageContext }) => {
               {navbar.links.map((navLink) => (
                 <li key={navLink.id}>
                   <CustomLink link={navLink} locale={router.locale}>
-                    <div className="hover:text-orange-500 duration-300 ease-in py-1">{navLink.text}</div>
+                    <div className="hover:text-orange-500 duration-300 ease-in py-1 ">{navLink.text}</div>
                   </CustomLink>
                 </li>
               ))}
@@ -108,10 +108,11 @@ const Navbar = ({ navbar, pageContext }) => {
             </button>
             {/* CTA button on desktop */}
             {navbar.button && (
-              <div className="hidden md:block">
+              <div className="hidden md:block w-full">
+                
                 <ButtonLink
                   button={navbar.button}
-                  appearance={getButtonAppearance(navbar.button.type, "light")}
+                  appearance={getButtonAppearance("nav", "nav")}
                   compact
                 />
               </div>
@@ -126,6 +127,7 @@ const Navbar = ({ navbar, pageContext }) => {
         <MobileNavMenu
           navbar={navbar}
           closeSelf={() => setMobileMenuIsShown(false)}
+          navicons={navicons}
         />
       )}
     </>

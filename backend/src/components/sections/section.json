@@ -37,6 +37,9 @@
     },
     "lastword": {
       "type": "string"
+    },
+    "idlink": {
+      "type": "string"
     }
   }
 }

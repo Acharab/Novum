@@ -6,6 +6,8 @@ import { useEffect, useState } from "react";
 import NextImage from "../elements/image";
 
 import CustomLink from "../elements/custom-link";
+import ButtonLink from "../elements/button-link";
+import { getButtonAppearance } from "utils/button";
 export default function Hero({ data }) {
   const color = data.bg;
   let text;
@@ -15,6 +17,7 @@ export default function Hero({ data }) {
   if (color === "white") {
     text = "black";
   }
+  
   
   return (
     <div className={`md:bg-${color} herovisuals text-${text} md:py-16 lg:py-0 xl:py-0 py-56 z-10 w-screen relative`}>
@@ -38,22 +41,19 @@ export default function Hero({ data }) {
               {data.Description}
             </p>
             {
-              // console.log(data.Buttons)
+              
 
               data.Buttons == null && <></>
             }
             {data.Buttons !== null && (
-              <CustomLink link={data.Buttons} key={data.Buttons.id}>
-                <button className="flex-auto  flex space-x-7 lg:items-start  sm:flex">
-                  <a
-                    target="_blank"
-                    rel="noopener"
-                    className="px-8 py-4 sm:items-center  text-base font-medium text-center ease-in duration-300 hover:bg-orange-500 hover:text-white   sm:text-blue-500 border-2 sm:border-blue-500 md:text-orange-500 md:border-orange-500 rounded"
-                  >
-                    <span className="pr-2">{data.Buttons.text}</span>
-                  </a>
-                </button>
-              </CustomLink>
+              <div className="md:w-[32%] lg:w-[19%] w-[40%]">
+
+              <ButtonLink
+              button={data.Buttons}
+              appearance={getButtonAppearance("blue", "blue")}
+              compact
+              />
+              </div>
             )}
           </div>
 
@@ -82,4 +82,5 @@ export default function Hero({ data }) {
     </section>
     </div>
   );
+
 }
