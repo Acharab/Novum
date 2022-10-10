@@ -23,7 +23,7 @@ const MobileNavMenu = ({ navbar, closeSelf, navicons }) => {
         {/* Top section */}
         <div className="flex flex-row justify-between py-2 items-center ">
           {/* Company logo */}
-          <NextImage width="200" height="70" media={navbar.logoWhite} />
+          <NextImage width="200" height="60" media={navbar.logoWhite} />
           {/* Close button */}
           <button onClick={closeSelf} className="py-1 px-1">
             <MdClose className="hover:text-blue-500 text-white h-8 w-auto" />
