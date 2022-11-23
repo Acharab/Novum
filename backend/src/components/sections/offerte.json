@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_sections_offertes",
+  "info": {
+    "displayName": "Offerte",
+    "icon": "bacon",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Offertes": {
+      "displayName": "Offertes",
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.offertes"
+    }
+  }
+}

@@ -47,7 +47,7 @@ export async function getStaticPaths(context) {
   const pages = await context.locales.reduce(
     async (currentPagesPromise, locale) => {
       const currentPages = await currentPagesPromise
-      const localePages = await fetchAPI("/pages", {
+      const localePages = await fetchAPI("/blogs", {
         locale,
         fields: ["slug", "locale"],
       })

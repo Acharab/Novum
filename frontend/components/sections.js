@@ -14,6 +14,7 @@ import Files from "./sections/Files"
 import Homeblog from "./sections/homeBlog"
 import eachblog from "./sections/eachblog"
 import thankyou from "./sections/thankyou"
+import offerte from "./sections/offerte"
 // Map Strapi sections to section components
 const sectionComponents = {
   ComponentSectionsHero: Hero,
@@ -31,6 +32,7 @@ const sectionComponents = {
   ComponentSectionsHomeblog: Homeblog,
   ComponentSectionsEachblog: eachblog,
   ComponentSectionsThankyou: thankyou,
+  ComponentSectionsOfferte: offerte,
 }
 
 // Display a section individually

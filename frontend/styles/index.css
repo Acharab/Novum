@@ -75,6 +75,7 @@
     transform: translateX(-100%);
     position: absolute;
   }
+  
 }
 
 @layer components{
@@ -90,6 +91,11 @@
   .herovisuals{
     background-color: black;
   }
+
+  
+}
+.survey-placeholder::placeholder{
+  color: rgb(118, 118, 118);
 }
 
 

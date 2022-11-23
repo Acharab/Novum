@@ -190,6 +190,13 @@ export async function getPageData({ slug, locale, preview }) {
                       link
                     }
                   }
+                  ... on ComponentSectionsOfferte{
+                    id
+                    Offertes{
+                      id
+                      Question
+                    }
+                  }
                   ... on ComponentSectionsAboutus {
                     id
                     Title

@@ -55,7 +55,8 @@
         "sections.homeblog",
         "sections.eachblog",
         "elements.faq-toggles",
-        "sections.thankyou"
+        "sections.thankyou",
+        "sections.offerte"
       ],
       "pluginOptions": {
         "i18n": {

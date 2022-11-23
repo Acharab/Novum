@@ -44,6 +44,7 @@ function Homeblog({ data, global }) {
 
   return (
     <section className="bg-blue-500 justify-center items-center">
+      {blogs === null || blogs === undefined || blogs.length === 0 ? <div className="w-screen h-screen flex justify-center items-center"><h3 className="text-5xl text-white">Binnenkort beschikbaar</h3></div>: (<>
       <div className="flex  container flex-col mt-2 items-center justify-center text-center">
         <h2
           data-text={data.lastword}
@@ -92,7 +93,10 @@ function Homeblog({ data, global }) {
           </div>
         </div>
       </div>
+      </>)}
+    
     </section>
+      
   );
 }
 

@@ -41,7 +41,7 @@ function homeServicesSection({ data }) {
                   {card.Title}
                 </h3>
                 <div>
-                  <p className="text-gray-500 justify-start text-justify  pt-2">
+                  <p className="text-gray-500  -tracking-2  pt-2">
                     {card.Description}
                   </p>
                   <div className="md:py-7 py-3">

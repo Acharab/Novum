@@ -25,7 +25,7 @@ const Footer = ({ footer }) => {
       <div className="container flex flex-col lg:flex-row lg:justify-between">
         <div>
           {footer.logo && (
-            <NextImage width="200" height="75" media={footer.logo} />
+            <NextImage width="200" height="60" media={footer.logo} />
           )}
         </div>
         <nav className="flex flex-wrap flex-row lg:gap-20 items-start lg:justify-end mb-10">
@@ -98,7 +98,7 @@ const Footer = ({ footer }) => {
                 <Link href="https://noab.nl/">
                   <div className="cursor-pointer">
                     <NextImage
-                      className="bg-gray-300 rounded-full cursor-pointer"
+                      className=" cursor-pointer"
                       height={120}
                       width={120}
                       media={footerColumn.noab}

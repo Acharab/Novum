@@ -23,7 +23,7 @@ export default function advantages({ data }) {
                   </div>
                 </h2>
                 
-                <p className=" py-5  leading-normal text-gray-400 text-justify    max-w-[450px]  dark:text-gray-300">
+                <p className=" py-5  leading-normal text-gray-500 text-justify    max-w-[300px]  dark:text-gray-300">
                   {advantage.Description}
                 </p>
               </div>
