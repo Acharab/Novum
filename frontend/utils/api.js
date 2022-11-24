@@ -1,9 +1,9 @@
-import qs from "qs"
+import qs from "qs";
 
 export function getStrapiURL(path) {
   return `${
     process.env.NEXT_PUBLIC_STRAPI_API_URL || "http://localhost:1337"
-  }${path}`
+  }${path}`;
 }
 
 /**
@@ -20,24 +20,24 @@ export async function fetchAPI(path, urlParamsObject = {}, options = {}) {
       "Content-Type": "application/json",
     },
     ...options,
-  }
+  };
 
   // Build request URL
-  const queryString = qs.stringify(urlParamsObject)
+  const queryString = qs.stringify(urlParamsObject);
   const requestUrl = `${getStrapiURL(
     `/api${path}${queryString ? `?${queryString}` : ""}`
-  )}`
+  )}`;
 
   // Trigger API call
-  const response = await fetch(requestUrl, mergedOptions)
+  const response = await fetch(requestUrl, mergedOptions);
 
   // Handle response
   if (!response.ok) {
-    console.error(response.statusText)
-    throw new Error(`An error occured please try again`)
+    console.error(response.statusText);
+    throw new Error(`An error occured please try again`);
   }
-  const data = await response.json()
-  return data
+  const data = await response.json();
+  return data;
 }
 
 /**
@@ -49,7 +49,7 @@ export async function fetchAPI(path, urlParamsObject = {}, options = {}) {
  */
 export async function getPageData({ slug, locale, preview }) {
   // Find the pages that match this slug
-  const gqlEndpoint = getStrapiURL("/graphql")
+  const gqlEndpoint = getStrapiURL("/graphql");
   const pagesRes = await fetch(gqlEndpoint, {
     method: "POST",
     headers: {
@@ -57,159 +57,198 @@ export async function getPageData({ slug, locale, preview }) {
     },
     body: JSON.stringify({
       query: `
-        fragment FileParts on UploadFileEntityResponse {
+      fragment FileParts on UploadFileEntityResponse {
+        data {
+          id
+          attributes {
+            alternativeText
+            width
+            height
+            mime
+            url
+            formats
+          }
+        }
+      }
+      query GetPages(
+        $slug: String!
+        $publicationState: PublicationState!
+        $locale: I18NLocaleCode!
+      ) {        
+        pages(
+          filters: { slug: { eq: $slug } }
+          publicationState: $publicationState
+          locale: $locale
+        ) {
           data {
             id
             attributes {
-              alternativeText
-              width
-              height
-              mime
-              url
-              formats
-            }
-          }
-        }
-        query GetPages(
-          $slug: String!
-          $publicationState: PublicationState!
-          $locale: I18NLocaleCode!
-        ) {        
-          pages(
-            filters: { slug: { eq: $slug } }
-            publicationState: $publicationState
-            locale: $locale
-          ) {
-            data {
-              id
-              attributes {
-                locale
-                localizations {
-                  data {
-                    id
-                    attributes {
-                      locale
+              locale
+              localizations {
+                data {
+                  id
+                  attributes {
+                    locale
+                  }
+                }
+              }
+              slug
+              blogs {
+                data {
+                  id
+                  attributes {
+                    Title
+                    Description
+                    Content
+                    Category
+                    Image {
+                      ...FileParts
+                    }
+                    Slug
+                  }
+                }
+              }
+              metadata {
+                metaTitle
+                metaDescription
+                shareImage {
+                  ...FileParts
+                }
+                twitterCardType
+                twitterUsername
+              }
+              contentSections {
+                __typename
+                ... on ComponentSectionsCta{
+                  id
+                  Title
+                  Buttons{
+                    url
+                    newTab
+                    text
+                    type
+                  }
+                }
+                ... on ComponentSectionsBlogpage{
+                  title
+                }
+                ... on ComponentSectionsFaq{
+                  id
+                  Faqtoggles {
+                    Question
+                    Answer
+                    pdfurl
+                  }
+                }
+                ... on ComponentSectionsHomeblog{
+                  id
+                  title
+                  lastword
+                }
+                
+                
+                ... on ComponentSectionsTeams{
+                  Teamcards{
+                    Name
+                    Image{
+                      ...FileParts
+                    }
+                    Position
+                    buttons{
+                      url
+                      newTab
+                      text
+                      type
                     }
                   }
                 }
-                slug
-                metadata {
-                  metaTitle
-                  metaDescription
-                  shareImage {
+                ... on ComponentSectionsAdvantages{
+                  Title
+                  Image{
                     ...FileParts
                   }
-                  twitterCardType
-                  twitterUsername
+                  Advantages{
+                    Title
+                    Description
+                    Image{
+                      ...FileParts
+                    }
+                  }
                 }
-                contentSections {
-                  __typename
-                  ... on ComponentSectionsCta{
+                ... on ComponentSectionsEachblog{
+                  blogNumber
+                }
+                ... on ComponentSectionsRevieuw{
+                  id
+                  Title
+                  lastword
+                  cards{
                     id
-                    Title
-                    Buttons{
-                      url
-                      newTab
-                      text
-                      type
-                    }
-                  }
-                  ... on ComponentSectionsBlogpage{
-                    title
-                  }
-                  ... on ComponentSectionsFaq{
-                    id
-                    Faqtoggles {
-                      Question
-                      Answer
-                      pdfurl
-                    }
-                  }
-                  ... on ComponentSectionsHomeblog{
-                    id
-                    title
-                    lastword
-                  }
-                  
-                  
-                  ... on ComponentSectionsTeams{
-                    Teamcards{
-                      Name
-                      Image{
-                        ...FileParts
-                      }
-                      Position
-                      buttons{
-                        url
-                        newTab
-                        text
-                        type
-                      }
-                    }
-                  }
-                  ... on ComponentSectionsAdvantages{
-                    Title
-                    Image{
+                    Image {
                       ...FileParts
                     }
-                    Advantages{
-                      Title
-                      Description
-                      Image{
-                        ...FileParts
-                      }
-                    }
+                    Name
+                    Opinion
+                    Rating
                   }
-                  ... on ComponentSectionsEachblog{
-                    blogNumber
-                  }
-                  ... on ComponentSectionsRevieuw{
+                }
+                ... on ComponentSectionsContact{
+                  id
+                  title
+                  subtitle
+                  icons{
                     id
-                    Title
-                    lastword
-                    cards{
-                      id
-                      Image {
-                        ...FileParts
-                      }
-                      Name
-                      Opinion
-                      Rating
+                    iconText
+                    icon{
+                      ...FileParts
                     }
+                    link
                   }
-                  ... on ComponentSectionsContact{
+                }
+                ... on ComponentSectionsOfferte{
+                  id
+                  Offertes{
                     id
-                    title
-                    subtitle
-                    icons{
-                      id
-                      iconText
-                      icon{
-                        ...FileParts
-                      }
-                      link
-                    }
+                    Question
                   }
-                  ... on ComponentSectionsOfferte{
-                    id
-                    Offertes{
-                      id
-                      Question
-                    }
+                }
+                ... on ComponentSectionsAboutus {
+                  id
+                  Title
+                  Description
+                  Image{
+                    ...FileParts
                   }
-                  ... on ComponentSectionsAboutus {
+                }
+                ... on ComponentSectionsHero{
+                  lastword
+                  id
+                  Title
+                  bg
+                  Description
+                  Image{
+                    ...FileParts
+                  }
+                  Buttons{
                     id
-                    Title
-                    Description
+                    url
+                    newTab
+                    text
+                    type
+                  }
+                }
+                ... on ComponentSectionsHomeService{
+                  id
+                  Title
+                  Description
+                  companys{
                     Image{
                       ...FileParts
                     }
                   }
-                  ... on ComponentSectionsHero{
-                    lastword
+                  Cards{
                     id
                     Title
-                    bg
                     Description
                     Image{
                       ...FileParts
@@ -222,89 +261,66 @@ export async function getPageData({ slug, locale, preview }) {
                       type
                     }
                   }
-                  ... on ComponentSectionsHomeService{
-                    id
-                    Title
-                    Description
-                    companys{
-                      Image{
-                        ...FileParts
-                      }
-                    }
-                    Cards{
-                      id
-                      Title
-                      Description
-                      Image{
-                        ...FileParts
-                      }
-                      Buttons{
-                        id
-                        url
-                        newTab
-                        text
-                        type
-                      }
-                    }
+                }
+                ... on ComponentSectionsThankyou{
+                  title
+                  image{
+                    ...FileParts
                   }
-                  ... on ComponentSectionsThankyou{
-                    title
-                    image{
-                      ...FileParts
-                    }
-                    links{
-                      url
-                      newTab
-                      text
-                      type
-                    }
+                  links{
+                    url
+                    newTab
+                    text
+                    type
                   }
-                  ... on ComponentSectionsSection{
-                    lastword
+                }
+                ... on ComponentSectionsSection{
+                  lastword
+                  id
+                  idlink
+                  Title
+                  Description
+                  Background
+                  Position
+                  Image{
+                    ...FileParts
+                  }
+                  Buttons{
                     id
-                    idlink
-                    Title
-                    Description
-                    Background
-                    Position
-                    Image{
-                      ...FileParts
-                    }
-                    Buttons{
-                      id
-                      url
-                      newTab
-                      text
-                      type
-                    }
+                    url
+                    newTab
+                    text
+                    type
                   }
                 }
               }
             }
           }
-        }      
-      `,
+        }
+      }      
+    
+    `,
       variables: {
         slug,
         publicationState: preview ? "PREVIEW" : "LIVE",
         locale,
       },
     }),
-  })
+  });
 
-  const pagesData = await pagesRes.json()
+  const pagesData = await pagesRes.json();
   // Make sure we found something, otherwise return null
   if (pagesData.data?.pages == null || pagesData.data.pages.length === 0) {
-    return null
+    return null;
   }
 
   // Return the first item since there should only be one result per slug
-  return pagesData.data.pages.data[0]
+  return pagesData.data.pages.data[0];
 }
 
 // Get site data from Strapi (metadata, navbar, footer...)
 export async function getGlobalData(locale) {
-  const gqlEndpoint = getStrapiURL("/graphql")
+  const gqlEndpoint = getStrapiURL("/graphql");
   const globalRes = await fetch(gqlEndpoint, {
     method: "POST",
     headers: {
@@ -333,6 +349,7 @@ export async function getGlobalData(locale) {
                 favicon {
                   ...FileParts
                 }
+                
                 metadata {
                   metaTitle
                   metaDescription
@@ -370,18 +387,7 @@ export async function getGlobalData(locale) {
                   }
                 }
                 
-                Blogs{
-                  id
-                  BlogTitle
-                  Slug
-                  readmore
-                  BlogContent
-                  BlogImage{
-                    ...FileParts
-                  }
-                  Description
-                  Category
-                  }
+                
                 navicons{
                   id
                   icon{
@@ -423,10 +429,76 @@ export async function getGlobalData(locale) {
         locale,
       },
     }),
-  })
+  });
 
-  const global = await globalRes.json()
+  const global = await globalRes.json();
+  console.log(global);
 
+  return global.data.global;
+}
 
-  return global.data.global
+export async function getBlogData({ slug, locale, preview }) {
+  const gqlEndpoint = getStrapiURL("/graphql");
+  const blogsRes = await fetch(gqlEndpoint, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      query: `
+      fragment FileParts on UploadFileEntityResponse {
+        data {
+          id
+          attributes {
+            alternativeText
+            width
+            height
+            mime
+            url
+            formats
+          }
+        }
+      }
+      query GetBlogs(
+                $slug: String!
+                $publicationState: PublicationState!
+                )
+                {
+                  blogs(
+                    filters: { Slug: { eq: $slug } }
+                    publicationState: $publicationState
+        )
+        {
+            data{
+              id
+              attributes{
+                Slug
+                Title
+                Content
+                Category
+                Description
+                Image{
+                  ...FileParts
+                }
+              }
+            }
+        }
+      }
+      `,
+      variables: {
+        slug,
+        publicationState: preview ? "PREVIEW" : "LIVE",
+        locale,
+      },
+    }),
+  });
+
+  const blogsData = await blogsRes.json();
+  // Make sure we found something, otherwise return null
+  if (blogsData.data?.blogs == null || blogsData.data.blogs.length === 0) {
+    return null;
+  }
+
+  // Return the first item since there should only be one result per slug
+  return blogsData.data.blogs.data[0];
 }

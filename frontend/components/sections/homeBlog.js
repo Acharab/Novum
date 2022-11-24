@@ -20,19 +20,20 @@ import "swiper/css";
 import NextImage from "../elements/image";
 import Link from "next/link";
 
-function Homeblog({ data, global }) {
-  let blogs = global.attributes.Blogs;
+function Homeblog({ blogs, data }) 
+{
+  console.log(blogs);
   blogs = blogs.slice(-4);
 
   const slides = [];
-  blogs.map((image, id) => {
+  blogs.map((blog, id) => {
     slides.push(
       <SwiperSlide className="w-96" key={id}>
         <div className="h-fit flex justify-center cursor-pointer">
-          <Link href={image.Slug} className="cursor-pointer">
+          <Link href={"blogs/" + blog.attributes.Slug} className="cursor-pointer">
             <NextImage
               className="object-cover"
-              media={image.BlogImage}
+              media={blog.attributes.Image}
               width={500}
               height={500}
             />
@@ -79,12 +80,12 @@ function Homeblog({ data, global }) {
             <div className="grid justify-center">
               {blogs.map((blog, id) => (
                 <div className=" " key={id}>
-                  <Link href={`/${blog.Slug}`}>
+                  <Link href={`blogs/${blog.attributes.Slug}`}>
                     <div className="lg:mb-3 mb-2  border-2 max-h[10vh] hover:cursor-pointer rounded p-3 ">
                       <h3 className="text-white font-bold text-xl">
-                        {blog.BlogTitle}
+                        {blog.attributes.Title}
                       </h3>
-                      <a className="text-white">{blog.Description}</a>
+                      <a className="text-white">{blog.attributes.Description}</a>
                     </div>
                   </Link>
                 </div>

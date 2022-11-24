@@ -11,7 +11,6 @@ import { getButtonAppearance } from "utils/button";
 import { useRouter } from "next/router";
 export default function Hero({ data }) {
   let router = useRouter();
-  console.log(router);
 
   const color = data.bg;
   let text;

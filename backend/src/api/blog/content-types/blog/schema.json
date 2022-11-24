@@ -12,13 +12,13 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Blogtitle": {
+    "Title": {
       "type": "string"
     },
-    "Blogcontent": {
+    "Content": {
       "type": "richtext"
     },
-    "Blogimage": {
+    "Image": {
       "type": "media",
       "multiple": false,
       "required": false,
@@ -29,8 +29,21 @@
         "audios"
       ]
     },
-    "readmore": {
-      "type": "richtext"
+    "Slug": {
+      "type": "uid",
+      "targetField": "Title"
+    },
+    "pages": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::page.page",
+      "inversedBy": "blogs"
+    },
+    "Description": {
+      "type": "string"
+    },
+    "Category": {
+      "type": "string"
     }
   }
 }

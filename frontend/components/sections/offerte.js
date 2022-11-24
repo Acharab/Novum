@@ -8,7 +8,7 @@ function offerte({ data }) {
           <div className="w-full px-12 ">
             <input
               type={"email"}
-              className="w-full survey-placeholder h-10 border-b border-gray-300 rounded-md placeholder-shown:pl-2 placeholder-shown:text-xl placeholder-shown:py-5 placeholder-shown:text-gray-600 placeholder-shown:p-7"
+              className="w-full survey-placeholde text-2xl h-10 border-b border-gray-300 rounded-md placeholder-shown:pl-2 placeholder-shown:text-xl placeholder-shown:py-5 placeholder-shown:text-gray-600 placeholder-shown:p-7"
               required
               placeholder="uw E-mailadres?"
             />
@@ -17,7 +17,7 @@ function offerte({ data }) {
             <div key={key} className="w-full px-12 ">
               <input
                 type={"text"}
-                className="w-full survey-placeholder h-10 border-b border-gray-300 rounded-md placeholder-shown:pl-2 placeholder-shown:text-xl placeholder-shown:py-7 placeholder-shown:text-gray-600 placeholder-shown:p-7"
+                className="w-full survey-placeholder text-2xl h-10 border-b border-gray-300 rounded-md placeholder-shown:pl-2 placeholder-shown:text-xl placeholder-shown:py-7 placeholder-shown:text-gray-600 placeholder-shown:p-7"
                 required
                 placeholder={offerte.Question}
               />

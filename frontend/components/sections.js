@@ -36,7 +36,7 @@ const sectionComponents = {
 }
 
 // Display a section individually
-const Section = ({ sectionData, global }) => {
+const Section = ({ sectionData, global, blogs }) => {
   // Prepare the component
   const SectionComponent = sectionComponents[sectionData.__typename]
   
@@ -46,7 +46,7 @@ const Section = ({ sectionData, global }) => {
   }
 
   // Display the section
-  return <SectionComponent data={sectionData} global={global} />
+  return <SectionComponent blogs={blogs} data={sectionData} global={global} />
 }
 
 const PreviewModeBanner = () => {
@@ -71,7 +71,7 @@ const PreviewModeBanner = () => {
 }
 
 // Display the list of sections
-const Sections = ({ sections, preview, global }) => {
+const Sections = ({ sections, preview, global, blogs }) => {
   return (
     <div className="flex flex-col">
       {/* Show a banner if preview mode is on */}
@@ -80,6 +80,7 @@ const Sections = ({ sections, preview, global }) => {
       {sections.map((section) => (
         <Section
           global={global}
+          blogs={blogs}
           sectionData={section}
           key={`${section.__typename}${section.id}`}
         />

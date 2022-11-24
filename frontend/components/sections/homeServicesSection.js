@@ -71,8 +71,8 @@ function homeServicesSection({ data }) {
         <div className="bg-white pb-14 ">
           <div className="flex flex-col justify-center container">
             <div className="flex flex-wrap justify-center gap-5 md:justify-around">
-              {data.companys.map((company) => (
-                <div key={company.Image.id} className="group">
+              {data.companys.map((company, id) => (
+                <div key={id} className="group">
                   <NextImage
                     className="object-contain ease-in duration-300 opacity-60  group-hover:opacity-100"
                     media={company.Image}
