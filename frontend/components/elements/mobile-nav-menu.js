@@ -42,7 +42,7 @@ const MobileNavMenu = ({ navbar, closeSelf, navicons }) => {
               </li>
             ))}
           </ul>
-        <Link className="w-20" href={navbar.button.url}>
+        <Link className="w-20" href={navbar?.button?.url}>
           <button onClick={closeSelf}   className="p-3 w-52 my-6 border-2 border-blue-500 text-blue-500 rounded">
             {navbar.button.text}
           </button>
@@ -52,7 +52,7 @@ const MobileNavMenu = ({ navbar, closeSelf, navicons }) => {
           <p className="text-3xl font-bold text-blue-500">Contact opnemen</p>
           <ul >  
           {navicons.map((icon) => (
-              <a key={icon?.id} href={icon.link} className="flex gap-x-3 items-center">
+              <a key={icon?.id} href={icon?.link} className="flex gap-x-3 items-center">
                 <NextImage media={icon.icon} width={20} height={20}/>
                 <span className="text-white">{icon.iconText}</span>
               </a>

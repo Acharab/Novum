@@ -35,6 +35,7 @@ const sectionComponents = {
   ComponentSectionsOfferte: offerte,
 }
 
+
 // Display a section individually
 const Section = ({ sectionData, global, blogs }) => {
   // Prepare the component

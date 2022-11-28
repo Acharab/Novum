@@ -58,7 +58,6 @@ function homeServicesSection({ data }) {
           <Link href="/diensten">
             <div className="flex-auto  flex justify-center items-center  lg:items-center mb-32 pt-20 sm:flex">
               <a
-                href=""
                 target="_blank"
                 rel="noopener"
                 className="w-[48%] uppercase py-2 px-2 sm:items-center items-stretch text-lg font-medium text-center ease-in duration-300 hover:bg-orange-500 hover:text-white text-orange-500 border border-orange-500 rounded  "

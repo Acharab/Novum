@@ -1,9 +1,10 @@
 import React from "react";
 import axios from "axios";
 import { useRouter } from "next/router";
+const Swal = require('sweetalert2')
 
 function Offerte({ data }) {
-  var Swal = require("sweetalert2")
+
   let router = useRouter()
   const handleSubmit = (e) => {
     

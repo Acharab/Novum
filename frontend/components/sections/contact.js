@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { MdLocationOn, MdEmail } from "react-icons/md";
-import { HiOutlineOfficeBuilding } from "react-icons/hi";
 import axios from "axios";
 import NextImage from "../elements/image";
 import { useRouter } from "next/router";
+const Swal = require('sweetalert2')
+
 
 function Contact({ data }) {
-  var Swal = require("sweetalert2")
+
   const [show, setShow] = useState(false);
   const router = useRouter()
   const handleSubmit = (e) => {
@@ -29,7 +29,7 @@ function Contact({ data }) {
           title: 'Er is een fout opgetreden',
           showConfirmButton: false,
           timer: 3000
-        })
+        }) 
       })
       .finally(() => {
         Swal.fire({
@@ -39,7 +39,7 @@ function Contact({ data }) {
           showConfirmButton: false,
           timer: 1500
         })
-        router.push('/')
+        router.push('/bedankt')
       });
   };
   return (

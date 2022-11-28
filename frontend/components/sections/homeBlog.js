@@ -29,7 +29,7 @@ function Homeblog({ blogs, data }) {
       <SwiperSlide className="w-96" key={id}>
         <div className="h-fit flex justify-center cursor-pointer">
           <Link
-            href={"blogs/" + blog.attributes.Slug}
+            href={"blogs/" + blog?.attributes?.Slug}
             className="cursor-pointer"
           >
             <NextImage
@@ -86,7 +86,7 @@ function Homeblog({ blogs, data }) {
                 <div className="grid justify-center">
                   {blogs.map((blog, id) => (
                     <div className=" " key={id}>
-                      <Link href={`blogs/${blog.attributes.Slug}`}>
+                      <Link href={`blogs/${blog?.attributes?.Slug}`}>
                         <div className="lg:mb-3 mb-2  border-2 max-h[10vh] hover:cursor-pointer rounded p-3 ">
                           <h3 className="text-white font-bold text-xl">
                             {blog.attributes.Title}

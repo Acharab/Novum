@@ -120,7 +120,7 @@ const Footer = ({ footer }) => {
             />
           </div>
           <div>
-            <Link className="cursor-pointer " href={footer.url}>
+            <Link className="cursor-pointer " href={footer?.url}>
               <p className="hover:text-orange-500 ease-in duration-300 cursor-pointer">
                 {footer?.urltext}
               </p>
