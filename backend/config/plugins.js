@@ -6,38 +6,33 @@ module.exports = ({ env }) => ({
         apiKey: env("SENDGRID_API_KEY"),
       },
       settings: {
-        defaultFrom: "Info@novumadviesgroep.nl",
-        defaultReplyTo: "Info@novumadviesgroep.nl",
+        defaultFrom: "dick@novumadviesgroep.nl",
+        defaultReplyTo: "dick@novumadviesgroep.nl",
       },
     },
   },
-  ezforms: {
-    config: {
+  ezforms:{
+    config:{
       captchaProvider: {
-        name: "none",
-        // config: {
-        //   secretKey: '6Lczec8fAAAAANwmMZ6nUWOC7PlMQCnNGxhniCRU',
-        //   minimumScore: 0.5
-        // }
+        name: 'none',
       },
       notificationProviders: [
         {
-          name: "email",
+          name: 'email',
           enabled: true,
           config: {
-            from: "",
-          },
+            from: 'dick@novumadviesgroep.nl'
+          }
         },
         {
-          // provider: 'twilio',
-          // enabled: true,
-          // config: {
-          //   accountSid: '',
-          //   authToken: '',
-          //   from: '',
-          // }
-        },
-      ],
+        provider: 'sendgrid',
+        enabled: true,
+        config: {
+          authToken: env('SENDGRID_API_KEY'),
+          from: 'dick@novumadviesgroep.nl',
+        }
+      }
+      ]
     },
   },
 });

@@ -74,7 +74,7 @@ function team({ data }) {
                     {teamCard.buttons.map((button, id) => (
                       <li key={id} >
                         <a
-                          href={button.url}
+                          href={`${button.text === "Email" ? "mailto:" + button.url : button.url}`}
                           className="text-gray-900 hover:text-gray-900 dark:hover:text-white dark:text-gray-300"
                         >
                           {button.text === "LinkedIn" ? (

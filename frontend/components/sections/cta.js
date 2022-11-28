@@ -38,7 +38,7 @@ export default function Cta({ data }) {
           >
             <div className="md:mt-[1rem] md:py-0 py-2 ">
               <button className="inline-block md:pl-5 px-3  uppercase md:ml-2 md:item-center md:text-center mx-auto text-xl sm:text-2xl  ml-0 lg:text-center text-white hover:text-blue-500 hover:bg-white font-bold  border-2 rounded-md ease-in duration-300 sm:px-7  py-4 sm:text-center ">
-                {data.Buttons.text}
+                {data?.Buttons?.text}
               </button>
             </div>
           </CustomLink>

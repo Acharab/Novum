@@ -91,7 +91,7 @@ const Navbar = ({ navbar, pageContext, navicons }) => {
               className={`hidden list-none md:flex flex-row md:gap-10  justify-center items-center`}
             >
               {navbar.links.map((navLink) => (
-                <li key={navLink.id}>
+                <li key={navLink?.id}>
                   <CustomLink link={navLink} locale={router.locale}>
                     <div className="hover:text-orange-500 duration-300 ease-in py-1 ">{navLink.text}</div>
                   </CustomLink>

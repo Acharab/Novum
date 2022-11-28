@@ -11,7 +11,7 @@ const NextImage = ({ media, ...props }) => {
   }
 
   // The image has a fixed width and height
-  if (props.width && props.height) {
+  if (props?.width && props?.height) {
     return (
       <Image loader={loader} src={url} alt={alternativeText || ""} {...props} />
     )
@@ -32,8 +32,8 @@ const NextImage = ({ media, ...props }) => {
 }
 
 Image.propTypes = {
-  media: mediaPropTypes.isRequired,
-  className: PropTypes.string,
+  media: mediaPropTypes,
+  className: PropTypes?.string,
 }
 
 export default NextImage

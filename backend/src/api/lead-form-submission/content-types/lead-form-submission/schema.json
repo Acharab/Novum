@@ -5,7 +5,8 @@
     "singularName": "lead-form-submission",
     "pluralName": "lead-form-submissions",
     "displayName": "Lead form submission",
-    "name": "lead-form-submission"
+    "name": "lead-form-submission",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -16,15 +17,16 @@
     "email": {
       "type": "string"
     },
-    "status": {
-      "type": "enumeration",
-      "enum": [
-        "seen",
-        "contacted",
-        "ignored"
-      ]
+    "verkoopfactures": {
+      "type": "string"
     },
-    "location": {
+    "inkoop": {
+      "type": "string"
+    },
+    "banktransacties": {
+      "type": "string"
+    },
+    "personeel": {
       "type": "string"
     }
   }

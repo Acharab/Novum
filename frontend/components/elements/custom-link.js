@@ -32,10 +32,10 @@ const CustomLink = ({ link, children }) => {
 
 CustomLink.propTypes = {
   link: linkPropTypes,
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node,
-  ])?.isRequired,
+  children: PropTypes?.oneOfType([
+    PropTypes?.arrayOf(PropTypes.node),
+    PropTypes?.node,
+  ]),
 }
 
 export default CustomLink

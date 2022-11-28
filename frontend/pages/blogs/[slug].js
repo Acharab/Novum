@@ -65,7 +65,7 @@ export async function getStaticPaths(context) {
 }
 
 export async function getStaticProps(context) {
-  console.log('context', context)
+  
   const { params, locale, locales, defaultLocale, preview = null } = context;
 
   const globalLocale = await getGlobalData(locale);

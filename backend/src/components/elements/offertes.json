@@ -8,6 +8,9 @@
   "attributes": {
     "Question": {
       "type": "string"
+    },
+    "field": {
+      "type": "string"
     }
   }
 }

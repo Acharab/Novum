@@ -44,7 +44,7 @@ const ButtonContent = ({ button, appearance, compact }) => {
         }
       )}
     >
-      {button.text}
+      {button?.text}
     </div>
   )
 }

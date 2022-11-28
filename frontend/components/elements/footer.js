@@ -36,7 +36,7 @@ const Footer = ({ footer }) => {
               <ul className="mt-2">
                 {footerColumn.links.map((link) => (
                   <li
-                    key={link.id}
+                    key={link?.id}
                     className="text-gray-300 py-1 px-1 flex -mx-1 hover:text-white"
                   >
                     {link.icons == "Phone" && (
@@ -95,7 +95,7 @@ const Footer = ({ footer }) => {
               </ul>
               {/* dont put a title to have it working */}
               {footerColumn?.title === null && (
-                <Link href="https://noab.nl/">
+                <Link href="https://noab.nl/resources/Leveringsvoorwaarden-NOAB-november-2021-v2.pdf ">
                   <div className="cursor-pointer">
                     <NextImage
                       className=" cursor-pointer"

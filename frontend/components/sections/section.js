@@ -15,7 +15,7 @@ export default function section({ data }) {
   return (
     <div
       className={`flex items-center justify-center bg-${data.Background}`}
-      id={data.idlink != null && data.idlink}
+      id={data?.idlink != null && data?.idlink}
     >
       <div className="container">
         <div className="flex flex-wrap  py-10 lg:gap-10 lg:flex-nowrap container p-6 mx-auto xl:px-0">
@@ -40,7 +40,7 @@ export default function section({ data }) {
                 {data.Buttons != undefined && (
                   <div className="md:w-[50%] lg:w-[30%] w-[40%]">
                     <ButtonLink
-                      button={data.Buttons}
+                      button={data?.Buttons}
                       appearance={getButtonAppearance("blue", "blue")}
                       compact
                     />
@@ -64,7 +64,7 @@ export default function section({ data }) {
                     <NextImage
                       // add relative class to make the z-index work
                       className="z-10 object-cover  rounded-3xl"
-                      media={data.Image}
+                      media={data?.Image}
                       // better not using width and heigt directly on here
                       width="500"
                       height="250"

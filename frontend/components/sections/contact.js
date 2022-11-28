@@ -6,17 +6,16 @@ import NextImage from "../elements/image";
 import { useRouter } from "next/router";
 
 function Contact({ data }) {
+  var Swal = require("sweetalert2")
   const [show, setShow] = useState(false);
   const router = useRouter()
   const handleSubmit = (e) => {
-    router.push("/bedankt");
-    e.preventDefault();
     let form = {
       name: e.target.name.value,
       email: e.target.email.value,
       message: e.target.beschrijving.value,
       telefoon: e.target.telefoon.value,
-      bedrijf: e.target.dienst.bedrijf,
+      bedrijf: e.target.bedrijf.value,
     };
     let token = "6Lczec8fAAAAANwmMZ6nUWOC7PlMQCnNGxhniCRU";
 
@@ -24,10 +23,23 @@ function Contact({ data }) {
       .post("http://localhost:1337/api/ezforms/submit", { formData: form })
       .then((res) => {})
       .catch((error) => {
-        // error.response.status Check status code
+        Swal.fire({
+          position: 'top-center',
+          icon: 'error',
+          title: 'Er is een fout opgetreden',
+          showConfirmButton: false,
+          timer: 3000
+        })
       })
       .finally(() => {
-        //Perform action in always
+        Swal.fire({
+          position: 'top-center',
+          icon: 'success',
+          title: 'Email is verzonden',
+          showConfirmButton: false,
+          timer: 1500
+        })
+        router.push('/')
       });
   };
   return (
@@ -53,7 +65,7 @@ function Contact({ data }) {
           </div>
           <div className="pt-4 rounded-lg  border-none lg:mx-10 col-span-2">
             <div className="rounded-b-lg">
-              <form>
+              <form onSubmit={handleSubmit}>
                 {/* <label for="first">First name:</label> */}
                 <div className="grid grid-cols-2">
                   <div className="px-4">
@@ -114,7 +126,6 @@ function Contact({ data }) {
                   <button
                     className="px-10 py-2 text-center ease-in duration-300 hover:bg-orange-500 hover:text-white text-orange-500 border-2 border-orange-500 rounded"
                     type="submit"
-                    onClick={handleSubmit}
                   >
                     Versturen
                   </button>

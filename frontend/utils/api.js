@@ -175,9 +175,6 @@ export async function getPageData({ slug, locale, preview }) {
                     }
                   }
                 }
-                ... on ComponentSectionsEachblog{
-                  blogNumber
-                }
                 ... on ComponentSectionsRevieuw{
                   id
                   Title
@@ -210,6 +207,7 @@ export async function getPageData({ slug, locale, preview }) {
                   Offertes{
                     id
                     Question
+                    field
                   }
                 }
                 ... on ComponentSectionsAboutus {
@@ -432,7 +430,7 @@ export async function getGlobalData(locale) {
   });
 
   const global = await globalRes.json();
-  console.log(global);
+  
 
   return global.data.global;
 }
