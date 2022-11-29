@@ -58,7 +58,7 @@ function team({ data }) {
                   <NextImage
                     // add relative class to make the z-index work
                     // getStrapiMedia(hero.attributes.hero_image)
-                    className="mx-auto mb-4 md:w-24 md:h-36 aspect-square rounded-xl object-cover object-top"
+                    className="mx-auto grayscale hover:grayscale-0 ease-in duration-300 mb-4 md:w-24 md:h-36 aspect-square rounded-xl object-cover object-top"
                     media={teamCard.Image}
                     // better not using width and heigt directly on here
                     width="220"

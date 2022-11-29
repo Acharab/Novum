@@ -45,7 +45,7 @@ function blogpage({ global, data, blogs}) {
           key={id}
           className="flex flex-col items-start col-span-12 space-y-3 sm:col-span-6  xl:col-span-4 border p-6 rounded-lg border-orange-500"
         >
-          <Link href={blog?.attributes?.Slug} className="block cursor-pointer">
+          <Link href={`blogs/${blog?.attributes?.Slug}`} className="block cursor-pointer">
             <NextImage
               className="rounded-md object-cover cursor-pointer"
               media={blog?.attributes?.Image}

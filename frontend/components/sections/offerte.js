@@ -8,18 +8,20 @@ function Offerte({ data }) {
   let router = useRouter()
   const handleSubmit = (e) => {
     
+    console.log(e.target)
     let form = {
       email: e.target.email.value,
       verkoopfactures: e.target.verkoopfactures.value,
       inkoop: e.target.inkoop.value,
-      banktransacties: e.target.banktransacties.value,
+      branch: e.target.branch.value,
       personeel: e.target.personeel.value,
+      rechtvorm: e.target.rechtvorm.value,
 
     };
     let token = "6Lczec8fAAAAANwmMZ6nUWOC7PlMQCnNGxhniCRU";
 
     axios
-      .post("http://localhost:1337/api/ezforms/submit", { formData: form })
+      .post(`${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/ezforms/submit`, { formData: form })
       .then((res) => {})
       .catch((error) => {
         Swal.fire({
@@ -38,7 +40,7 @@ function Offerte({ data }) {
           showConfirmButton: false,
           timer: 1500
         })
-        // router.push('/')
+        router.push('/')
       });
   };
   return (
@@ -65,6 +67,14 @@ function Offerte({ data }) {
               />
             </div>
           ))}
+          <select required name="rechtvorm" className=" px-12 w-full text-2xl h-10 border-b border-gray-300 rounded-md placeholder-shown:pl-2 placeholder-shown:text-xl placeholder-shown:py-7 placeholder-shown:text-gray-600 placeholder-shown:p-7">
+            <option value="BV">B.V</option>
+            <option value="Eenmanszaak">Eenmanszaak</option>
+            <option value="V.o.F">V.o.F</option>
+            <option value="Stichting">Stichting</option>
+            <option value="Maatschap">Maatschap</option>
+            <option value="Anders">Anders</option>
+          </select>
           <button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded md:w-1/5 w-1/4  ml-auto mr-12">
             Verzenden
           </button>

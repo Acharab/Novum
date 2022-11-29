@@ -20,7 +20,7 @@ function Contact({ data }) {
     let token = "6Lczec8fAAAAANwmMZ6nUWOC7PlMQCnNGxhniCRU";
 
     axios
-      .post("http://localhost:1337/api/ezforms/submit", { formData: form })
+      .post(`${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/ezforms/submit`, { formData: form })
       .then((res) => {})
       .catch((error) => {
         Swal.fire({
@@ -39,7 +39,7 @@ function Contact({ data }) {
           showConfirmButton: false,
           timer: 1500
         })
-        router.push('/bedankt')
+        router.push('/')
       });
   };
   return (

@@ -16,14 +16,14 @@ export default function advantages({ data }) {
             </h2>
             {data.Advantages.map((advantage, id) => (
               <div key={id}>
-                <h2 className=" justify-center flex gap-5  mt-3 text-xl font-bold leading-relaxed pb-5 tracking-tight text-gray-000 lg:leading-tight lg:text-xl">
+                <h2 className=" justify-center flex gap-5  mt-3 text-xl font-bold leading-relaxed pb-5 tracking-tight  lg:leading-tight lg:text-xl">
                   <NextImage media={advantage.Image} className="text-3xl" width="60px" height="60px" />{" "}
                   <div className="text-center items-center flex">
                   {advantage.Title}
                   </div>
                 </h2>
                 
-                <p className=" py-5  leading-normal text-gray-500 text-justify    max-w-[300px]  dark:text-gray-300">
+                <p className=" py-5 m-0   text-gray-500 text-justify flex justify-center    max-w-[350px]  dark:text-gray-300">
                   {advantage.Description}
                 </p>
               </div>

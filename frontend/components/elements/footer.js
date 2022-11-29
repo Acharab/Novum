@@ -95,7 +95,8 @@ const Footer = ({ footer }) => {
               </ul>
               {/* dont put a title to have it working */}
               {footerColumn?.title === null && (
-                <Link href="https://noab.nl/resources/Leveringsvoorwaarden-NOAB-november-2021-v2.pdf ">
+                <Link target="_blank" href="https://noab.nl/resources/Leveringsvoorwaarden-NOAB-november-2021-v2.pdf ">
+                  <a target="_blank">
                   <div className="cursor-pointer">
                     <NextImage
                       className=" cursor-pointer"
@@ -104,6 +105,7 @@ const Footer = ({ footer }) => {
                       media={footerColumn?.noab}
                     />
                   </div>
+                  </a>
                 </Link>
               )}
             </div>
