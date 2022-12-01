@@ -53,7 +53,7 @@ function Offerte({ data }) {
               className="w-full survey-placeholde text-2xl h-10 border-b border-gray-300 rounded-md placeholder-shown:pl-2 placeholder-shown:text-xl placeholder-shown:py-5 placeholder-shown:text-gray-600 placeholder-shown:p-7"
               required
               name="email"
-              placeholder="uw E-mailadres?"
+              placeholder="Wat is uw e-mailadres?"
             />
           </div>
           {data.Offertes.map((offerte, key) => (
@@ -67,7 +67,9 @@ function Offerte({ data }) {
               />
             </div>
           ))}
-          <select required name="rechtvorm" className=" px-12 w-full text-2xl h-10 border-b border-gray-300 rounded-md placeholder-shown:pl-2 placeholder-shown:text-xl placeholder-shown:py-7 placeholder-shown:text-gray-600 placeholder-shown:p-7">
+          <div  className="w-full px-12 ">
+          <label className="survey-placeholder text-gray-600 text-xl mb-2" >Welke rechtsvorm heeft uw bedrijf?</label>
+          <select required name="rechtvorm" className="select-icon  w-full text-xl h-10 text-gray-600 ">
             <option value="BV">B.V</option>
             <option value="Eenmanszaak">Eenmanszaak</option>
             <option value="V.o.F">V.o.F</option>
@@ -75,6 +77,7 @@ function Offerte({ data }) {
             <option value="Maatschap">Maatschap</option>
             <option value="Anders">Anders</option>
           </select>
+          </div>
           <button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded md:w-1/5 w-1/4  ml-auto mr-12">
             Verzenden
           </button>

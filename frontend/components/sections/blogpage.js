@@ -36,10 +36,10 @@ function blogpage({ global, data, blogs}) {
     //   ))}
     // </div>
     <div className="flex justify-center ">
-    <div className="w-full  py-6 mx-auto space-y-5 sm:py-8 md:py-12 sm:space-y-8 md:space-y-16  container">
+    <div className="w-full  py-6 mx-auto space-y-5 sm:py-8 md:py-12 sm:space-y-8 md:space-y-16  ">
       <div className="flex grid grid-cols-12 pb-10 gap-x-6 gap-y-16">
 
-      {blogs === null || blogs === undefined || blogs.length === 0 ? <div className="w-full col-span-12 h-screen flex justify-center items-center"><h3 className="text-5xl text-black">Binnenkort beschikbaar</h3></div>: 
+      {blogs === null || blogs === undefined || blogs.length === 0 ? <div className="w-screen col-span-12 h-[80vh] flex  justify-center items-center"><h3 className="text-5xl text-orange-500">Binnenkort beschikbaar</h3></div>: 
       blogs.map((blog, id) => (
         <div
           key={id}
