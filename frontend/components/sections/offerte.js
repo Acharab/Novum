@@ -44,7 +44,7 @@ function Offerte({ data }) {
   };
   return (
     <div className="w-full h-[90vh] bg-black flex justify-center items-center ">
-      <div className="md:w-[55%]  w-[90%] max-h-max min-h-max rounded-xl border bg-white border-gray-300 shadow-xl p-8">
+      <div className="md:w-[55%]  w-[90%] max-h-max min-h-max rounded-xl border bg-white border-gray-300 shadow-xl lg:p-8 p-2">
         {/* <form onSubmit={handleSubmit}  className="w-full h-full justify-center items-center flex flex-col md:gap-y-12 gap-y-7  py-12">
           <div className="w-full px-12 ">
             <input
@@ -88,20 +88,20 @@ function Offerte({ data }) {
             <div className="w-full p-4 ">
               <input
                 type={"email"}
-                className="border-b-2 focus:outline-none border-orange-500 bg-transparent text-black text-lg p-3 w-full"
+                className="border-b-2 focus:outline-none border-orange-500 bg-transparent text-black lg:text-lg text-sm p-3 w-full"
                 required
                 name="email"
                 placeholder="Wat is uw e-mailadres?"
               />
             </div>
           </div>
-          <div className="grid grid-cols-2 py-4">
+          <div className="grid lg:grid-cols-2 grid-cols-1 py-4">
             {/* <label for="last">Last name:</label> */}
             {data.Offertes.map((offerte, key) => (
               <div key={key} className="p-4 ">
                 <input
                   type={"text"}
-                  className="border-b-2 focus:outline-none border-orange-500 bg-transparent text-black text-lg p-3 w-full"
+                  className="border-b-2 focus:outline-none border-orange-500 bg-transparent text-black lg:text-lg text-sm p-2 w-full"
                   required
                   name={offerte.field}
                   placeholder={offerte.Question}
@@ -109,7 +109,8 @@ function Offerte({ data }) {
               </div>
             ))}
           </div>
-          <div className="p-4">
+          <div className="pb-4 px-4">
+            <label>Welke rechtsvorm heeft uw bedrijf?</label>
             <select
               required
               name="rechtvorm"

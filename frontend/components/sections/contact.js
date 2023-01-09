@@ -66,7 +66,7 @@ function Contact({ data }) {
             <div className="rounded-b-lg">
               <form onSubmit={handleSubmit}>
                 {/* <label for="first">First name:</label> */}
-                <div className="grid grid-cols-2">
+                <div className="grid lg:grid-cols-2 grid-cols-1">
                   <div className="px-4">
                     <input
                       className=" border-b-2 focus:outline-none border-orange-500 bg-transparent text-black text-lg p-3 w-full"
@@ -89,7 +89,7 @@ function Contact({ data }) {
                     />
                   </div>
                 </div>
-                <div className="mt-2 grid grid-cols-2">
+                <div className="mt-2 grid lg:grid-cols-2 grid-cols-1">
                   <div className="px-4">
                     <input
                       className=" border-b-2 focus:outline-none border-orange-500 bg-transparent text-lg p-3 w-full"
