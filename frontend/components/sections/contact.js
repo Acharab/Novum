@@ -6,7 +6,6 @@ const Swal = require('sweetalert2')
 
 
 function Contact({ data }) {
-
   const [show, setShow] = useState(false);
   const router = useRouter()
   const handleSubmit = (e) => {

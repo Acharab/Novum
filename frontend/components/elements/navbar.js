@@ -22,25 +22,26 @@ import LocaleSwitch from "../locale-switch";
 
 const Navbar = ({ navbar, pageContext, navicons }) => {
   const router = useRouter();
+
   const [mobileMenuIsShown, setMobileMenuIsShown] = useState(false);
   const background =
     router.asPath === "/"
       ? "black"
       : router.asPath === "/diensten"
-      ? "white"
+      ? "black"
       //diensten variants
       : router.asPath === "/diensten#omzetbelasting"
-      ? "white"
-      : router.asPath === "/diensten#jaarrekening"
-      ? "white"
+      ? "black"
+      : router.asPath === "/diensten#jaarrekeningen"
+      ? "black"
       : router.asPath === "/diensten#algemeenadvies"
-      ? "white"
+      ? "black"
       : router.asPath === "/diensten#salarisadministratie"
-      ? "white"
+      ? "black"
       : router.asPath === "/diensten#rapportage"
-      ? "white"
+      ? "black"
       : router.asPath === "/diensten#inkomstenbelasting"
-      ? "white"
+      ? "black"
       : router.asPath === "/aboutus"
       ? "black"
       : router.asPath === "/contact"
@@ -56,6 +57,8 @@ const Navbar = ({ navbar, pageContext, navicons }) => {
       : router.asPath === "/blogitemfourth"
       ? "white"
       : router.asPath === "/bedankt"
+      ? "black"
+      : router.asPath === "/offerte"
       ? "black"
       : "";
   let text;
